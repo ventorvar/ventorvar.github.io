@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Intro to Advanced Joystick Configs - Part 1 :: Ventorvar — A simple theme for Hugo</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://example.org/posts/joystick-intro/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Intro to Advanced Joystick Configs - Part 1 :: Ventorvar — A simple theme for Hugo" />
+<meta name="twitter:description" content="The Problem with Windows Using multiple joysticks on Windows can be a huge pain. There is no guarantee of the input device order when your machine reboots or when they&amp;rsquo;re plugged, even if you follow the same order every time. This is compounded for Star Citizen where you&amp;rsquo;re asked to remove the USER folder each time there is an update, and the configuration interface has a long way to go before it&amp;rsquo;s not a pain to use." />
+<meta name="twitter:site" content="" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="http://example.org/img/default.jpg">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Intro to Advanced Joystick Configs - Part 1 :: Ventorvar — A simple theme for Hugo">
+<meta property="og:description" content="" />
+<meta property="og:url" content="http://example.org/posts/joystick-intro/" />
+<meta property="og:site_name" content="Intro to Advanced Joystick Configs - Part 1" />
+<meta property="og:image" content="http://example.org/img/default.jpg">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-01-11 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="http://example.org/" style="text-decoration: none;">
+  <div class="logo">
+    
+      <span class="logo__mark">></span>
+      <span class="logo__text">ventorvar gaming</span>
+      <span class="logo__cursor"></span>
+    
+  </div>
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner">
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+</nav>
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="http://example.org/posts/joystick-intro/">Intro to Advanced Joystick Configs - Part 1</a></h2>
+    <div class="post-meta">
+      <span class="post-date">
+        2019-01-11
+      </span>
+      <span class="post-author">Written by ventorvar</span>
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h1 id="the-problem-with-windows">The Problem with Windows</h1>
+
+<p>Using multiple joysticks on Windows can be a huge pain. There is no guarantee of
+the input device order when your machine reboots or when they&rsquo;re plugged, even
+if you follow the same order every time. This is compounded for Star Citizen
+where you&rsquo;re asked to remove the <strong>USER</strong> folder each time there is an update,
+and the configuration interface has a long way to go before it&rsquo;s not a pain to
+use.</p>
+
+<p>Luckily, there has been a lot of effort into creating configuration tools that
+exist outside of games to fine tune your setup, and setup configurations that
+might not even be possible within the game itself.</p>
+
+<h1 id="our-configuration">Our Configuration</h1>
+
+<p>The goal of this guide is to help you get some base configurations and tools
+installed, and give you enough understanding of the components to tweak and
+build your own configurations. I&rsquo;ll be supplying my configurations as a quick
+starting off point though.</p>
+
+<p>My setup consists the <a href="https://amzn.com/B01N2PE8CZ">Thrustmaster T16000M FCS Flight Pack</a> with an additional <a href="https://amzn.com/B01MQEDEEW">Thrustmaster T16000M</a> giving me:</p>
+
+<ul>
+<li>Throttle</li>
+<li>Pedals</li>
+<li>Left Joystick</li>
+<li>Right Joystick</li>
+</ul>
+
+<p>In Star Citizen, I like to use a HOTAS (Hand On Stick And Throttle) setup while
+cruising, and a HOSAS (Hand On Stick and Stick) while dog-fighting, or when I
+need more fine control over my movements.</p>
+
+<p>One of the first issues we run into with a configuration like this, is that
+Star Citizen doesn&rsquo;t allow you to bind multiple inputs to the same action. For
+example, I want to be able to strafe forward/back/left/right using the left
+joystick <strong>as well</strong> as the mini-stick on the front of the throttle. By setting
+up everything outside of the game, we can create configurations like this quite
+easily.</p>
+
+<h1 id="pre-requisites">Pre-requisites</h1>
+
+<p>To get started, we need to install a few tools and drivers. We&rsquo;ll only need to
+do these steps once. We&rsquo;ll be using three tools for our setup.</p>
+
+<ul>
+<li>vJoy</li>
+<li>HidGuardian</li>
+<li>JoystickGremlin</li>
+</ul>
+
+<p>vJoy is a virtual joystick device for windows that is going to allow the inputs
+from all of our separate physical devices to be mapped to a single virtual
+device. This makes configuration in game much easier and consistent since we
+don&rsquo;t have to worry about our device IDs on windows changing every time we
+reconnect them.</p>
+
+<p>Just because we&rsquo;re mapping the inputs from our physical devices to vJoy doesn&rsquo;t
+mean that games don&rsquo;t stop seeing the original inputs too. This means that
+you&rsquo;ll have a difficult time guaranteeing that you can get the game to
+only use the vJoy inputs, rather than the device inputs. To solve that issue,
+we&rsquo;re going to use a Windows filter driver called <a href="https://github.com/ViGEm/HidGuardian">HidGuardian</a> which acts as a sort of firewall, only
+allowing configured applications to see specific devices.</p>
+
+<h2 id="install-hidguardian">Install HidGuardian</h2>
+
+<p>The <em>easiest</em> way to install HidGuardian is to use <a href="https://www.autohotkey.com/boards/viewtopic.php?t=34890">WhiteKnight</a> utility. You don&rsquo;t
+need to follow the directions, just download the tool and follow these:</p>
+
+<ul>
+<li>Extract <strong>WhiteKnight</strong></li>
+<li>Run <strong>AutoWhitelister.exe</strong></li>
+<li>Click <strong>Install</strong> next to <strong>HidGuardian Install state:  Not Installed</strong></li>
+<li>Close <strong>WhiteKnight</strong></li>
+</ul>
+
+<blockquote>
+<p><strong>Note:</strong>
+If you&rsquo;d rather install this manually, you can download the driver from
+<a href="https://downloads.vigem.org/projects/HidGuardian/stable/1.14.3.0/windows/x64/HidGuardian.zip">https://downloads.vigem.org/projects/HidGuardian/stable/1.14.3.0/windows/x64/HidGuardian.zip</a>
+and use the <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/devcon">devcon</a>
+tool from Microsoft to as follows.
+<code>devcon.exe install HidGuardian.inf Root\HidGuardian</code>, then
+<code>devcon.exe classfilter HIDClass upper -HidGuardian</code></p>
+</blockquote>
+
+<h2 id="install-vjoy">Install vJoy</h2>
+
+<p>Installing vJoy is a more straight forward matter:</p>
+
+<ul>
+<li>Install <a href="http://vjoystick.sourceforge.net/site/index.php/download-a-install/download">vJoy</a> version 2.1.8 (direct download link <a href="https://sourceforge.net/projects/vjoystick/files/Beta%202.x/2.1.8.31-291116/vJoySetup.exe/download">2.1.8 2016-11-29</a>)</li>
+<li>Run <strong>Configure vJoy</strong> from the Start menu
+
+<ul>
+<li>Make sure the <strong>Enable vJoy</strong> box is checked at the bottom left of the window</li>
+<li>vJoy Device 1</li>
+<li>Ensure all of the <strong>Axes</strong> boxes are checked</li>
+<li>Set <strong>Number of Buttons</strong> to 64</li>
+<li>Set <strong>POV Hat Switch</strong> to Continuous, and select <strong>4</strong> for <strong>POVs</strong></li>
+<li>All options in <strong>Force Feedback</strong> should be unchecked</li>
+<li>Click Apply</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p><strong>Note:</strong> We only need one vJoy device for my setup. That being said, there&rsquo;s
+nothing stopping you from having more if you need more axis&rsquo;s</p>
+</blockquote>
+
+<h2 id="install-joystickgremlin">Install JoystickGremlin</h2>
+
+<ul>
+<li><a href="https://whitemagic.github.io/JoystickGremlin/download/">https://whitemagic.github.io/JoystickGremlin/download/</a></li>
+<li>Launch JoystickGremlin in admin mode</li>
+<li>Under the <strong>Tools</strong> menu, click <strong>Options</strong>
+
+<ul>
+<li>Select the <strong>HidGuardian</strong> Tab</li>
+<li>Check boxes for each device type you want to use. For my setup I have a
+box for <strong>T.16000M</strong> and a box for <strong>TWCS Throttle</strong></li>
+</ul></li>
+<li>Unplug all of your devices</li>
+<li>Plug your devices back in</li>
+</ul>
+
+<h1 id="verify-setup">Verify Setup</h1>
+
+<p>At this point, JoystickGremlin should have a tab for each of your devices in
+its main window, as well as a <strong>Keyboard</strong>, <strong>vJoy Device #1</strong> and <strong>Settings</strong>
+tabs.</p>
+
+<p>Launch the <strong>Set up USB Game Controllers</strong> tool from the Start menu, and you
+should see <strong>vJoy Device</strong>, and none of your joysticks you configured in
+<strong>HidGuardian</strong> tab in <strong>JoystickGremlin</strong>.</p>
+
+<h1 id="configuration-guide">Configuration Guide</h1>
+
+<p>Now that the ground work is all done. We&rsquo;ll continue the guide in <a href="http://example.org/posts/joystick-config/">part 2</a>.</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="http://example.org/posts/joystick-config/">
+                <span class="button__text">Intro to Advanced Joystick Configs - Part 2</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user"> </div>
+    
+  </div>
+</footer>
+
+
+  <script src="/assets/main.js"></script>
+
+  <script src="/assets/prism.js"></script>
+
+
+
+  
+</div>
+
+</body>
+</html>
