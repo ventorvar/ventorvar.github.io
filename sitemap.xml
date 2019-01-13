@@ -3,33 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/posts/joystick-intro/</loc>
+    <loc>https://ventorvar.com/posts/joystick-intro/</loc>
     <lastmod>2019-01-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/joystick-config/</loc>
+    <loc>https://ventorvar.com/posts/joystick-config/</loc>
     <lastmod>2019-01-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://ventorvar.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://ventorvar.com/posts/</loc>
     <lastmod>2019-01-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://ventorvar.com/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://ventorvar.com/</loc>
     <lastmod>2019-01-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
