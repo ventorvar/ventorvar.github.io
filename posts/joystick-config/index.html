@@ -27,11 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Intro to Advanced Joystick Configs - Part 2 :: Ventorvar Gaming — " />
 <meta name="twitter:description" content="Note: This is part 2 of a series. If you haven&amp;rsquo;t already installed all the required tools, go check out part 1 first.
-  Open JoystickGremlin, load profile and ensure correct devices are set Ensure JoystickGremlin is active (green controller icon) and check Monitor vJoy that input is affecting the vjoy controller
- Delete USER folder
- Launch StarCitizen
- Copy Actions.xml to USER/Control/Mappings (restart?)
- Options -&amp;gt; Keybindings -&amp;gt; Advanced -&amp;gt; Load Defaults -&amp;gt; HOSASAT" />
+ Getting familiar with Joystick Gremlin The keystone to our entire setup, is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard." />
 <meta name="twitter:site" content="" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="https://ventorvar.com/img/post/https://cdn.discordapp.com/attachments/526695875011936279/534175949562839050/joystick-config-cover.jpg">
@@ -117,6 +113,8 @@
         
           #<a href="https://ventorvar.com/tags/joystickgremlin">JoystickGremlin</a>&nbsp;
         
+          #<a href="https://ventorvar.com/tags/vjoy">vJoy</a>&nbsp;
+        
           #<a href="https://ventorvar.com/tags/hotas">HOTAS</a>&nbsp;
         
           #<a href="https://ventorvar.com/tags/hosas">HOSAS</a>&nbsp;
@@ -138,26 +136,255 @@
 the required tools, go check out <a href="https://ventorvar.com/posts/joystick-intro/">part 1</a> first.</p>
 </blockquote>
 
+<h1 id="getting-familiar-with-joystick-gremlin">Getting familiar with Joystick Gremlin</h1>
+
+<p>The keystone to our entire setup, is <a href="https://whitemagic.github.io/JoystickGremlin/">Joystick Gremlin</a> (JG). JG allows you to remap
+inputs from your devices to other inputs on your system. For example, you can
+configure it so with you press the trigger button on your left joystick, it
+presses the <strong>Shift</strong> key on your keyboard. This opens an entire array of
+possibilities that we&rsquo;ll only begin to touch on.</p>
+
+
+
+<a href="https://cdn.discordapp.com/attachments/526695875011936279/534222975533056011/joy-config-diagram.png">
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534222975533056011/joy-config-diagram.png"  class="center"  />
+
+</a>
+
+
+
+
+
+<p>In this guide, we&rsquo;ll be configuring a profile for a single game, Star Citizen.
+Also, we&rsquo;ll be basing this guide on two Thrustmaster T16000M joysticks and
+TWCS Throttle, but the concepts being discussed here apply to any game and any
+input device.</p>
+
+<h1 id="philosophy">Philosophy</h1>
+
+<p>When configuring input devices, I prefer to keep the game as close to a
+default configuration as possible. This means if I uninstall/reinstall, or
+move between machines, I just have to have my JG profiles, and I don&rsquo;t have to
+worry about re-configuring within the game more than I have to.</p>
+
+<p>This means that I also prefer to rebind physical joystick buttons to
+emit keyboard commands for the default key bindings rather than configure
+joystick buttons within the game.</p>
+
+<p>With Star Citizen, most of this can be achieved by loading the advanced keyboard
+and mouse loadouts, but we will have to configure the joystick options as well.</p>
+
+<h2 id="planning-it-out">Planning it out</h2>
+
+<p>Before we start configuring JG and Star Citizen, it&rsquo;s good to come up with a
+plan. One of the easiest ways I&rsquo;ve found is to use Drawings in Google Docs.</p>
+
+
+
+<a href="https://cdn.discordapp.com/attachments/526695875011936279/534230131795951636/Joystick_Config.png">
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534230131795951636/Joystick_Config.png"  class="center"  />
+
+</a>
+
+
+
+
+
+<p>You can copy mine from <a href="https://bit.ly/2VS6tz2">here</a>. I label the physical
+input with the in-game action on top, and the keyboard, or joystick input on
+the bottom. As you can see, most of my inputs map to keyboard commands, with
+only a few joystick buttons (J1, J2, J3, etc).</p>
+
+<blockquote>
+<p><strong>Note:</strong> I&rsquo;m constantly tweaking this Joystick Config drawing, so it may not
+match the image above, or the configurations down below.</p>
+</blockquote>
+
+<h1 id="joystick-gremlin-configuration">Joystick Gremlin Configuration</h1>
+
+<h2 id="identifying-devices">Identifying Devices</h2>
+
+<p>First, we&rsquo;re going to configure the two joysticks. There is a small controller
+icon under the menu bar that can be black or green. This is the <strong>Activate</strong>
+button. When activated, the button will be green and will process all inputs
+as configured. To work on our configuration, though, we&rsquo;re going to deactivate
+JG, making sure the button is black. We&rsquo;ll switch back and forth</p>
+
+
+
+<a href="https://cdn.discordapp.com/attachments/526695875011936279/534227285910224896/jg_activate_button.PNG">
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534227285910224896/jg_activate_button.PNG"  class="center"  />
+
+</a>
+
+
+
+
+
+<p>In JG we have two tabs for our joysticks. The way to tell them apart is select
+of the tabs, then move the left and right joysticks one at a time. When moving
+or pressing buttons, JG will select the physical input on the left side that
+corresponds with the input you&rsquo;re creating on your joystick. When you&rsquo;ve
+determined which joystick is which, use the <strong>Device Label</strong> field under the
+tabs as a reminder.</p>
+
+<h2 id="mapping-axes">Mapping Axes</h2>
+
+<p>One of the more complex mappings are the axes. We&rsquo;ll be mapping the roll, pitch
+and yaw axes from our left and right joysticks onto a single vJoy device. We&rsquo;ll
+be using this standardized frame <a href="https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation">reference</a>:</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Axes_conventions#/media/File:RPY_angles_of_spaceships_(local_frame).png">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/RPY_angles_of_spaceships_%28local_frame%29.png"  class="center"  />
+
+
+
+</a></p>
+
+<p>On your right joystick:</p>
+
 <ul>
-<li>Open JoystickGremlin, load profile and ensure correct devices are set</li>
-
-<li><p>Ensure JoystickGremlin is active (green controller icon) and check Monitor
-vJoy that input is affecting the vjoy controller</p></li>
-
-<li><p>Delete USER folder</p></li>
-
-<li><p>Launch StarCitizen</p></li>
-
-<li><p>Copy Actions.xml to USER/Control/Mappings (restart?)</p></li>
-
-<li><p>Options -&gt; Keybindings -&gt; Advanced -&gt; Load Defaults -&gt; HOSASAT</p>
-
-<ul>
-<li>select keyboard, mouse and joystick</li>
-</ul></li>
+<li>Move the stick to determine the <strong>pitch</strong> (front to back) physical input
+(it will be Axis 2)</li>
+<li>Enter &ldquo;Pitch&rdquo; into the <strong>Action Discription</strong> box</li>
+<li>Select <strong>Remap</strong> from the <strong>action</strong> (left) dropdown, and click <strong>Add</strong></li>
+<li>In the new <strong>Remap</strong> action form, choose <strong>vJoy Device 1</strong>, <strong>Axis Y</strong></li>
 </ul>
 
-<h1 id="precision-mode">Precision mode</h1>
+<p>Repeat these steps for <strong>roll</strong> (side to side) to the <strong>X</strong> axis and <strong>yaw</strong>
+(twist) to the <strong>Z</strong> axis</p>
+
+
+
+<a href="https://cdn.discordapp.com/attachments/526695875011936279/534239533080772608/jg_axes_map.PNG">
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534239533080772608/jg_axes_map.PNG"  class="center"  />
+
+</a>
+
+
+
+
+
+<p>On your left joystick we&rsquo;ll be configuring strafe forward/back, left/right and
+up/down. Follow the same steps from above, except on your left joystick and
+mapping:</p>
+
+<ul>
+<li>Forward/Back -&gt; <strong>vJoy Device 1</strong>, <strong>Axis X Rotation</strong></li>
+<li>Left/Right -&gt; <strong>vJoy Device 1</strong>, <strong>Axis Y Rotation</strong></li>
+<li>Up/Down -&gt; <strong>vJoy Device 1</strong>, <strong>Axis Z Rotation</strong></li>
+</ul>
+
+<h3 id="testing-it-out">Testing it out</h3>
+
+<p>To test our configuration, open the <strong>Monitor vJoy</strong> application. Ensure to
+<strong>activate</strong> JG by clicking the <strong>activate</strong> button which turns it green. Now
+when you move your left and right joysticks, you should see the corresponding
+axis move in the vJoy monitor.</p>
+
+<h3 id="inverting-axes">Inverting axes</h3>
+
+<p>If we loaded this up right now and tried it out in Star Citizen we&rsquo;d find that
+the strafe Forward/Back and Up/Down would be reversed. Rather than fixing this
+in game, we can fix it in JG by inversing the curve. To do that:</p>
+
+<ul>
+<li>Select the <strong>Strafe Forward/Back</strong> action</li>
+<li>Within the <strong>Remap</strong> action that has already been configured, select
+<strong>Responsive Curve</strong> from the action dropdown and click <strong>Add</strong></li>
+<li>Click the <strong>invert</strong> button in the <strong>Response Curve</strong> action form</li>
+</ul>
+
+<p>Repeat the steps for the <strong>Strafe Up/Down</strong> input</p>
+
+
+
+<a href="https://cdn.discordapp.com/attachments/526695875011936279/534243371959713792/jg_response_curve.PNG">
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534243371959713792/jg_response_curve.PNG"  class="center"  />
+
+</a>
+
+
+
+
+
+<h3 id="doubling-up-inputs">Doubling up inputs</h3>
+
+<p>I want to be able to strafe in all directions from my throttle as well. To do
+this I just had to bind the axes on the throttle to the same axes that I bound
+my left controller to. Since the game will be configured just to use the
+rotational axes, it doesn&rsquo;t matter which physical input is the one manipulating
+the virtual interface. This is how I&rsquo;m able to control the same functions from
+multiple devices at once.</p>
+
+<h2 id="mapping-hats">Mapping Hats</h2>
+
+<p>In order to use the hats like other buttons, you need to configure them first.</p>
+
+<ul>
+<li>Select the <strong>Hat 1</strong> on the right stick</li>
+<li>Select <strong>Hat Buttons</strong> from the <strong>containers</strong> dropdown (to the right of the
+actions dropdown) and click <strong>Add</strong></li>
+</ul>
+
+
+
+<a href="https://cdn.discordapp.com/attachments/526695875011936279/534250224923967489/jg_hats.PNG">
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534250224923967489/jg_hats.PNG"  class="center"  />
+
+</a>
+
+
+
+
+
+<p>You can now treat the individual directions of the hat as buttons using the
+following instructions.</p>
+
+<h2 id="mapping-buttons">Mapping Buttons</h2>
+
+<p>Joystick buttons can be mapped in two different ways (for our use case). If
+we&rsquo;re mapping a physical button to a vJoy button (for instance the trigger on
+the right stick), this would use the <strong>remap</strong> action.</p>
+
+<ul>
+<li>Find the right trigger physical input but clicking <strong>Button 1</strong> on the left,
+or by physically pressing the trigger button while the <strong>Right</strong> joystick
+tab is selected</li>
+<li>Select the <strong>Remap</strong> action and click <strong>Add</strong></li>
+<li>Configure the <strong>Remap</strong> form to <strong>vJoy Device 1</strong> and <strong>Button 1</strong></li>
+</ul>
+
+<p>If we&rsquo;re mapping a physical input to a keyboard command, then we use the <strong>map
+to keyboard</strong> action.</p>
+
+<ul>
+<li>Find the bottom right-most button on the left joystick by physically pressing
+the trigger button while the <strong>Left</strong> joystick tab is selected (Button 10)</li>
+<li>Select the <strong>Map to Keyboard</strong> action and click <strong>Add</strong></li>
+<li>Press the <strong>Record keys</strong> button in the <strong>Map to Keyboard</strong> form</li>
+<li>Press <strong>Left Alt + J</strong> on your keyboard and release</li>
+</ul>
+
+
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534246929622892555/jg_gimbal_lock.PNG"  class="center"  />
+
+
+
+
+
+<p>Continue this process for every physical button you&rsquo;d like to configure. For
+Star Citizen (3.4), you can use <a href="https://imgur.com/a/v4eofhx">this</a> as a good
+reference. However, key bindings change frequently and I&rsquo;d advise you try to
+find a current version of the advanced key bindings.</p>
 
     </div>
     

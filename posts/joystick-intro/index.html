@@ -110,7 +110,7 @@
         
           #<a href="https://ventorvar.com/tags/star-citizen">Star Citizen</a>&nbsp;
         
-          #<a href="https://ventorvar.com/tags/joystickgremlin">JoystickGremlin</a>&nbsp;
+          #<a href="https://ventorvar.com/tags/joystick-gremlin">Joystick Gremlin</a>&nbsp;
         
           #<a href="https://ventorvar.com/tags/hotas">HOTAS</a>&nbsp;
         
@@ -158,7 +158,10 @@ starting off point though.</p>
 </ul>
 
 
+
   <img src="https://images-na.ssl-images-amazon.com/images/I/91so7Q7rm6L._SL1500_.jpg"  class="center"  />
+
+
 
 
 
@@ -167,7 +170,10 @@ cruising, and a HOSAS (Hand On Stick and Stick) while dog-fighting, or when I
 need more fine control over my movements.</p>
 
 
+
   <img src="https://m.media-amazon.com/images/S/aplus-media/vc/67684a48-d57f-4fc4-9d61-6032c5d6c7bd.jpg"  class="center"  />
+
+
 
 
 
@@ -186,7 +192,7 @@ do these steps once. We&rsquo;ll be using three tools for our setup.</p>
 <ul>
 <li>vJoy</li>
 <li>HidGuardian</li>
-<li>JoystickGremlin</li>
+<li>Joystick Gremlin</li>
 </ul>
 
 <p>vJoy is a virtual joystick device for windows that is going to allow the inputs
@@ -204,18 +210,21 @@ allowing configured applications to see specific devices.</p>
 
 <h2 id="install-hidguardian">Install HidGuardian</h2>
 
-<p>The <em>easiest</em> way to install HidGuardian is to use <a href="https://www.autohotkey.com/boards/viewtopic.php?t=34890">WhiteKnight</a> utility. You don&rsquo;t
+<p>The <em>easiest</em> way to install <strong>HidGuardian</strong> is to use <a href="https://www.autohotkey.com/boards/viewtopic.php?t=34890">WhiteKnight</a> utility. You don&rsquo;t
 need to follow the directions, just download the tool and follow these:</p>
 
 <ul>
 <li>Extract <strong>WhiteKnight</strong></li>
 <li>Run <strong>AutoWhitelister.exe</strong></li>
-<li>Click <strong>Install</strong> next to <strong>HidGuardian Install state:  Not Installed</strong></li>
+<li>Click <strong>Install</strong> next to <strong>HidGuardian</strong> Install state:  Not Installed**</li>
 <li>Close <strong>WhiteKnight</strong></li>
 </ul>
 
 
+
   <img src="https://cdn.discordapp.com/attachments/526695875011936279/534163838862491658/whiteknight_install.png"  class="center"  />
+
+
 
 
 
@@ -249,7 +258,10 @@ tool from Microsoft to as follows.
 </ul>
 
 
+
   <img src="https://cdn.discordapp.com/attachments/526695875011936279/534164019246792705/vjoy_config.PNG"  class="center"  />
+
+
 
 
 
@@ -258,11 +270,11 @@ tool from Microsoft to as follows.
 nothing stopping you from having more if you need more axis&rsquo;s</p>
 </blockquote>
 
-<h2 id="install-joystickgremlin">Install JoystickGremlin</h2>
+<h2 id="install-joystick-gremlin">Install Joystick Gremlin</h2>
 
 <ul>
 <li><a href="https://whitemagic.github.io/JoystickGremlin/download/">https://whitemagic.github.io/JoystickGremlin/download/</a></li>
-<li>Launch JoystickGremlin in admin mode</li>
+<li>Launch <strong>Joystick Gremlin</strong> in admin mode</li>
 <li>Under the <strong>Tools</strong> menu, click <strong>Options</strong>
 
 <ul>
@@ -275,27 +287,53 @@ box for <strong>T.16000M</strong> and a box for <strong>TWCS Throttle</strong></
 </ul>
 
 
+
   <img src="https://cdn.discordapp.com/attachments/526695875011936279/534164216224022542/jg_hidguardian.PNG"  class="center"  />
 
 
 
+
+
+<p>Because we&rsquo;re using <strong>HidGuardian</strong>, <strong>Joystick Gremlin</strong> must always be run as an
+administrator. To make this easier, we can modify the shortcut so that it will
+always start that way.</p>
+
+<ul>
+<li>Open Start and find <strong>Joystick Gremlin</strong></li>
+<li>Right-click the shortcut and select <strong>Properties</strong></li>
+<li>Select the <strong>Compatibility</strong> tab</li>
+<li>Check the box for <strong>Run this program as an administrator</strong></li>
+<li>Click <strong>Apply</strong> and <strong>OK</strong></li>
+</ul>
+
+<blockquote>
+<p><strong>Note:</strong> If you ever run <strong>Joystick Gremlin</strong> and down see your joysticks,
+double check that you&rsquo;re running it as an administrator.</p>
+</blockquote>
+
 <h1 id="verify-setup">Verify Setup</h1>
 
-<p>At this point, JoystickGremlin should have a tab for each of your devices in
+<p>At this point, <strong>Joystick Gremlin</strong> should have a tab for each of your devices in
 its main window, as well as a <strong>Keyboard</strong>, <strong>vJoy Device #1</strong> and <strong>Settings</strong>
 tabs.</p>
+
 
 
   <img src="https://cdn.discordapp.com/attachments/526695875011936279/534169767406469150/jg_verify.PNG"  class="center"  />
 
 
 
+
+
 <p>Launch the <strong>Set up USB Game Controllers</strong> tool from the Start menu, and you
 should see <strong>vJoy Device</strong>, and none of your joysticks you configured in
-<strong>HidGuardian</strong> tab in <strong>JoystickGremlin</strong>.</p>
+<strong>HidGuardian</strong> tab in *<strong><em>Joystick Gremlin</em></strong>*.</p>
+
 
 
   <img src="https://cdn.discordapp.com/attachments/526695875011936279/534164342992797696/game_controllers.PNG"  class="center"  />
+
+
 
 
 

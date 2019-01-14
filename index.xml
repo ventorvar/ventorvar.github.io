@@ -37,11 +37,7 @@
       
       <guid>https://ventorvar.com/posts/joystick-config/</guid>
       <description>Note: This is part 2 of a series. If you haven&amp;rsquo;t already installed all the required tools, go check out part 1 first.
-  Open JoystickGremlin, load profile and ensure correct devices are set Ensure JoystickGremlin is active (green controller icon) and check Monitor vJoy that input is affecting the vjoy controller
- Delete USER folder
- Launch StarCitizen
- Copy Actions.xml to USER/Control/Mappings (restart?)
- Options -&amp;gt; Keybindings -&amp;gt; Advanced -&amp;gt; Load Defaults -&amp;gt; HOSASAT</description>
+ Getting familiar with Joystick Gremlin The keystone to our entire setup, is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard.</description>
     </item>
     
   </channel>
