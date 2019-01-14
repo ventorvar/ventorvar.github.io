@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Intro to Advanced Joystick Configs - Part 2 :: Ventorvar Gaming — " />
 <meta name="twitter:description" content="Note: This is part 2 of a series. If you haven&amp;rsquo;t already installed all the required tools, go check out part 1 first.
- Getting familiar with Joystick Gremlin The keystone to our entire setup, is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard." />
+ Getting familiar with Joystick Gremlin The keystone to our entire setup is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard." />
 <meta name="twitter:site" content="" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="https://ventorvar.com/img/post/https://cdn.discordapp.com/attachments/526695875011936279/534175949562839050/joystick-config-cover.jpg">
@@ -111,9 +111,7 @@
         
           #<a href="https://ventorvar.com/tags/star-citizen">Star Citizen</a>&nbsp;
         
-          #<a href="https://ventorvar.com/tags/joystickgremlin">JoystickGremlin</a>&nbsp;
-        
-          #<a href="https://ventorvar.com/tags/vjoy">vJoy</a>&nbsp;
+          #<a href="https://ventorvar.com/tags/joystick-gremlin">Joystick Gremlin</a>&nbsp;
         
           #<a href="https://ventorvar.com/tags/hotas">HOTAS</a>&nbsp;
         
@@ -128,6 +126,36 @@
         
     
 
+    
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#getting-familiar-with-joystick-gremlin">Getting familiar with Joystick Gremlin</a></li>
+<li><a href="#philosophy">Philosophy</a>
+<ul>
+<li><a href="#planning-it-out">Planning it out</a></li>
+</ul></li>
+<li><a href="#joystick-gremlin-configuration">Joystick Gremlin Configuration</a>
+<ul>
+<li><a href="#identifying-devices">Identifying Devices</a></li>
+<li><a href="#mapping-axes">Mapping Axes</a>
+<ul>
+<li><a href="#testing-it-out">Testing it out</a></li>
+<li><a href="#inverting-axes">Inverting axes</a></li>
+<li><a href="#doubling-up-inputs">Doubling up inputs</a></li>
+</ul></li>
+<li><a href="#mapping-hats">Mapping Hats</a></li>
+<li><a href="#mapping-buttons">Mapping Buttons</a></li>
+</ul></li>
+<li><a href="#configuring-star-citizen">Configuring Star Citizen</a>
+<ul>
+<li><a href="#resetting-to-keyboard-advanced">Resetting to Keyboard Advanced</a></li>
+<li><a href="#configuring-joystick-inputs">Configuring Joystick Inputs</a></li>
+<li><a href="#saving-configuration-for-later-use">Saving configuration for later use</a></li>
+</ul></li>
+</ul>
+</nav>
+    
+
     <div class="post-content">
       
 
@@ -138,7 +166,7 @@ the required tools, go check out <a href="https://ventorvar.com/posts/joystick-i
 
 <h1 id="getting-familiar-with-joystick-gremlin">Getting familiar with Joystick Gremlin</h1>
 
-<p>The keystone to our entire setup, is <a href="https://whitemagic.github.io/JoystickGremlin/">Joystick Gremlin</a> (JG). JG allows you to remap
+<p>The keystone to our entire setup is <a href="https://whitemagic.github.io/JoystickGremlin/">Joystick Gremlin</a> (JG). JG allows you to remap
 inputs from your devices to other inputs on your system. For example, you can
 configure it so with you press the trigger button on your left joystick, it
 presses the <strong>Shift</strong> key on your keyboard. This opens an entire array of
@@ -173,7 +201,7 @@ emit keyboard commands for the default key bindings rather than configure
 joystick buttons within the game.</p>
 
 <p>With Star Citizen, most of this can be achieved by loading the advanced keyboard
-and mouse loadouts, but we will have to configure the joystick options as well.</p>
+and mouse profiles, but we will have to configure the joystick options as well.</p>
 
 <h2 id="planning-it-out">Planning it out</h2>
 
@@ -235,7 +263,7 @@ tabs as a reminder.</p>
 
 <p>One of the more complex mappings are the axes. We&rsquo;ll be mapping the roll, pitch
 and yaw axes from our left and right joysticks onto a single vJoy device. We&rsquo;ll
-be using this standardized frame <a href="https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation">reference</a>:</p>
+be using this standardized frame reference<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
 
 <p><a href="https://en.wikipedia.org/wiki/Axes_conventions#/media/File:RPY_angles_of_spaceships_(local_frame).png">
 
@@ -250,7 +278,7 @@ be using this standardized frame <a href="https://en.wikipedia.org/wiki/Axes_con
 <ul>
 <li>Move the stick to determine the <strong>pitch</strong> (front to back) physical input
 (it will be Axis 2)</li>
-<li>Enter &ldquo;Pitch&rdquo; into the <strong>Action Discription</strong> box</li>
+<li>Enter &ldquo;Pitch&rdquo; into the <strong>Action Description</strong> box</li>
 <li>Select <strong>Remap</strong> from the <strong>action</strong> (left) dropdown, and click <strong>Add</strong></li>
 <li>In the new <strong>Remap</strong> action form, choose <strong>vJoy Device 1</strong>, <strong>Axis Y</strong></li>
 </ul>
@@ -291,7 +319,7 @@ axis move in the vJoy monitor.</p>
 
 <p>If we loaded this up right now and tried it out in Star Citizen we&rsquo;d find that
 the strafe Forward/Back and Up/Down would be reversed. Rather than fixing this
-in game, we can fix it in JG by inversing the curve. To do that:</p>
+in game, we can fix it in JG by inverting the curve. To do that:</p>
 
 <ul>
 <li>Select the <strong>Strafe Forward/Back</strong> action</li>
@@ -375,7 +403,11 @@ the trigger button while the <strong>Left</strong> joystick tab is selected (But
 
 
 
+<a href="https://cdn.discordapp.com/attachments/526695875011936279/534246929622892555/jg_gimbal_lock.PNG">
+
   <img src="https://cdn.discordapp.com/attachments/526695875011936279/534246929622892555/jg_gimbal_lock.PNG"  class="center"  />
+
+</a>
 
 
 
@@ -385,6 +417,354 @@ the trigger button while the <strong>Left</strong> joystick tab is selected (But
 Star Citizen (3.4), you can use <a href="https://imgur.com/a/v4eofhx">this</a> as a good
 reference. However, key bindings change frequently and I&rsquo;d advise you try to
 find a current version of the advanced key bindings.</p>
+
+<h1 id="configuring-star-citizen">Configuring Star Citizen</h1>
+
+<p>At this point, you should have every physical button that you want to configure
+either <strong>remap</strong>&rsquo;d to the vJoy device, or to a keyboard press. Now we&rsquo;ll go into
+Star Citizen and do some final configurations.</p>
+
+<h2 id="resetting-to-keyboard-advanced">Resetting to Keyboard Advanced</h2>
+
+<p>First, we&rsquo;ll reset the Star Citizen configuration, and load the advanced
+keyboard controls.</p>
+
+<ul>
+<li>Delete your <strong>USER</strong> folder (within your RSI installation folder
+<code>RSI\StarCitizen\LIVE\USER</code>)</li>
+<li>Launch Star Citizen</li>
+<li>Choose <strong>OPTIONS</strong>, then the <strong>KEYBINDINGS</strong> tab and click <strong>ADVANCED
+CONTROLS CUSTOMIZATION</strong></li>
+<li>Click the button on the right that says <strong>&gt; CONTROL PROFILES</strong></li>
+<li>Scroll down and choose <strong>Keyboard Advanced</strong></li>
+<li>Choose <strong>Keyboard</strong> and <strong>Mouse</strong> in the two dropdowns on the right and click
+load</li>
+</ul>
+
+
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534482961219846165/sc_adv_keyboard.png"  class="center"  />
+
+
+
+
+
+<blockquote>
+<p><strong>Note:</strong> It is my preference to unbind the mouse from pitch/yaw which allows
+you to look around with the mouse without worrying about the ship moving. To
+do this, after you you&rsquo;ve loaded the advanced controls expand <strong>Flight -
+Movement</strong>, clear <strong>Pitch</strong> and <strong>Yaw</strong> by selecting the item with a left
+click, then right-clicking on the item</p>
+</blockquote>
+
+<p>Now all of the keyboard mappings we&rsquo;ve created in JG should match up to their
+in-game equivalents.</p>
+
+<h2 id="configuring-joystick-inputs">Configuring Joystick Inputs</h2>
+
+<p>Still in the <strong>ADVANCED CONTROLS CUSTOMIZATION</strong> UI, use the right arrow in the
+bottom right button that currently says <strong>Keyboard / Mouse</strong> to select
+**Joystick / HOTAS **. None of the built-in control profiles match our purpose,
+so we&rsquo;re going to completely clear the joystick configuration, and configure
+the vJoy inputs that we&rsquo;ve configured. There are also a few things that don&rsquo;t
+have a keyboard command configured by default, so we&rsquo;ve set them to a joystick
+button.</p>
+
+<ul>
+<li>Expand each configuration section, and clear all entries by left clicking on
+an item, then right-clicking on it</li>
+<li>While clearing out the configuration, assign certain item using the following
+table. Do this by clicking on the item twice, then moving the joystick in the
+desired axis, or pressing the intended button. Use your joystick configuration
+map for a reference.</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Action</th>
+<th>Binding</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Flight - View</td>
+<td>Look left / right</td>
+<td>Z-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Look up / down</td>
+<td>Y-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Look Behind</td>
+<td>Button 19</td>
+</tr>
+
+<tr>
+<td>Flight - Movement</td>
+<td>Pitch</td>
+<td>Y-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Yaw</td>
+<td>Z-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Roll</td>
+<td>X-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Throttle up / down (abs.)</td>
+<td>Slider 1</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Strafe up / down</td>
+<td>Z-Axis Rotation</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Strafe left / right</td>
+<td>Y-Axis Rotation</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Strafe forward / back</td>
+<td>X-Axis Rotation</td>
+</tr>
+
+<tr>
+<td></td>
+<td>G-force safety (Toggle)</td>
+<td>Button 30</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Decoupled strafe up / down</td>
+<td>Z-Axis Rotation</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Decoupled strafe left / right</td>
+<td>Y-Axis Rotation</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Decoupled strafe forward / back</td>
+<td>X-Axis Rotation</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Decoupled yaw</td>
+<td>Z-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Decoupled pitch</td>
+<td>Y-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Decoupled roll</td>
+<td>X-Axis</td>
+</tr>
+
+<tr>
+<td>Flight - Targeting</td>
+<td>Scanning Radar Ping</td>
+<td>Button 1</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Scanning Increase Radar Angle</td>
+<td>Button 3</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Scanning Decrease Radar Angle</td>
+<td>Button 4</td>
+</tr>
+
+<tr>
+<td>Mining</td>
+<td>Fire Mining Laster (Toggle)</td>
+<td>Button 1</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Switch Mining Laser (Toggle)</td>
+<td>Button 2</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Increase / Decrease Mining Laser Power</td>
+<td>Slider 2</td>
+</tr>
+
+<tr>
+<td>Flight - Turrets</td>
+<td>Aim left / right</td>
+<td>Z-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Aim up / down</td>
+<td>Y-Axis</td>
+</tr>
+
+<tr>
+<td>Flight - Weapons</td>
+<td>Fire Weapon Group 1</td>
+<td>Button 1</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Fire Weapon Group 2</td>
+<td>Button 3</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Acquire missile lock</td>
+<td>Button 2</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Launch missile</td>
+<td>Button 2</td>
+</tr>
+
+<tr>
+<td>Ground Vehicle - General</td>
+<td>Look left / right</td>
+<td>Z-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Look up / down</td>
+<td>Y-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Look behind</td>
+<td>Button 19</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Fire Weapon Group 1</td>
+<td>Button 1</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Fire Weapon Group 2</td>
+<td>Button 3</td>
+</tr>
+
+<tr>
+<td>Ground Vehicle - Movement</td>
+<td>Drive Forward / Backward</td>
+<td>Y-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Turn Left / Right</td>
+<td>Z-Axis</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Primary Fire</td>
+<td>Button 1</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Secondary Fire</td>
+<td>Button 3</td>
+</tr>
+
+<tr>
+<td>Ground Vehicle - Gunner</td>
+<td>Primary Fire</td>
+<td>Button 1</td>
+</tr>
+
+<tr>
+<td></td>
+<td>Secondary Fire</td>
+<td>Button 3</td>
+</tr>
+
+<tr>
+<td>Social - General</td>
+<td>Re-spawn</td>
+<td>Button 1</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="saving-configuration-for-later-use">Saving configuration for later use</h2>
+
+<p>In Star Citizen, you can save your current configuration as a control profile to
+reload later. At the main menu:</p>
+
+<ul>
+<li>Choose <strong>OPTIONS</strong>, then the <strong>KEYBINDINGS</strong> tab and click <strong>ADVANCED
+CONTROLS CUSTOMIZATION</strong></li>
+<li>Click the button on the right that says <strong>&gt; CONTROL PROFILES</strong></li>
+<li>Click &lsquo;Save Control Settings&rsquo;</li>
+<li>Enter a name for your control setup, and click <strong>Save</strong></li>
+<li>Copy the control settings profile from the
+<code>RSI\StarCitizen\LIVE\USER\Controls\Mappings</code> folder.</li>
+</ul>
+
+<p>Whenever you need to delete your <strong>USER</strong> folder, simply copy the
+<strong>layout_*_exported.yml</strong> back into the <code>USER\Controls\Mappings</code> folder and
+use the <strong>CONTROL PROFILES</strong> button in Star Citizen like you did to load the
+advanced keyboard controls above.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation">https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
 
     </div>
     
