@@ -1,80 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-    <title>Intro to Advanced Joystick Configs - Part 2 :: Ventorvar Gaming</title>
-  
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <head>
+    
+      <title>Intro to Advanced Joystick Configs - Part 2 :: Ventorvar Gaming</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content=""/>
+<meta name="description" content="Note: This is part 2 of a series. If you haven&#39;t already installed all the required tools, go check out part 1 first.
+  Just need the configs? go the to TL;DR
+ Getting familiar with Joystick Gremlin The keystone to our entire setup is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://ventorvar.com/posts/joystick-config/" />
 
 
-<link rel="stylesheet" href="/assets/style.css">
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="/assets/style.css">
 
 
 
-
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="/img/favicon.png">
+<link rel="stylesheet" href="https://ventorvar.com/assets/style.css">
 
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Intro to Advanced Joystick Configs - Part 2 :: Ventorvar Gaming — " />
-<meta name="twitter:description" content="Note: This is part 2 of a series. If you haven&amp;rsquo;t already installed all the required tools, go check out part 1 first.
- Getting familiar with Joystick Gremlin The keystone to our entire setup is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard." />
-<meta name="twitter:site" content="" />
-<meta name="twitter:creator" content="" />
-<meta name="twitter:image" content="https://ventorvar.com/img/post/https://cdn.discordapp.com/attachments/526695875011936279/534175949562839050/joystick-config-cover.jpg">
+<link rel="stylesheet" href="https://ventorvar.com/style.css">
 
 
-<meta property="og:locale" content="en" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ventorvar.com/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ventorvar.com/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Intro to Advanced Joystick Configs - Part 2"/>
+<meta name="twitter:description" content="Getting the most out of multiple HID inputs for Star Citizen, part 2. After preparing our system, we&#39;ll talk about the configuration methodology, and walk through setting our devices from the ground up.
+"/>
+
+
+
+<meta property="og:title" content="Intro to Advanced Joystick Configs - Part 2" />
+<meta property="og:description" content="Getting the most out of multiple HID inputs for Star Citizen, part 2. After preparing our system, we&#39;ll talk about the configuration methodology, and walk through setting our devices from the ground up.
+" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Intro to Advanced Joystick Configs - Part 2 :: Ventorvar Gaming — ">
-<meta property="og:description" content="" />
 <meta property="og:url" content="https://ventorvar.com/posts/joystick-config/" />
-<meta property="og:site_name" content="Intro to Advanced Joystick Configs - Part 2" />
-<meta property="og:image" content="https://ventorvar.com/img/post/https://cdn.discordapp.com/attachments/526695875011936279/534175949562839050/joystick-config-cover.jpg">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-
-<meta property="article:published_time" content="2019-01-11 00:00:00 &#43;0000 UTC" />
+<meta property="article:published_time" content="2019-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-06-11T00:00:00+00:00" />
 
 
 
 
 
 
-
-</head>
-<body class="dark-theme">
-<div class="container">
-  <header class="header">
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
   <span class="header__inner">
-    <a href="https://ventorvar.com/" style="text-decoration: none;">
-  <div class="logo">
-    
-      <span class="logo__mark">></span>
-      <span class="logo__text">ventorvar gaming</span>
-      <span class="logo__cursor"></span>
-    
-  </div>
+    <a href="https://ventorvar.com/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">ventorvar gaming</span>
+    <span class="logo__cursor"></span>
+  
 </a>
 
     <span class="header__right">
       
         <nav class="menu">
-  <ul class="menu__inner">
+  <ul class="menu__inner menu__inner--desktop">
     
-      <li><a href="/about">About</a></li>
+      
+        
+          <li><a href="../../about">About</a></li>
+        
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="../../about">About</a></li>
+      
     
   </ul>
 </nav>
+
         <span class="menu-trigger">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none"/>
@@ -95,187 +105,108 @@
 </header>
 
 
-  <div class="content">
-    
+      <div class="content">
+        
   <div class="post">
     <h2 class="post-title"><a href="https://ventorvar.com/posts/joystick-config/">Intro to Advanced Joystick Configs - Part 2</a></h2>
     <div class="post-meta">
-      <span class="post-date">
-        2019-01-11
-      </span>
-      <span class="post-author">Written by ventorvar</span>
+      
+        <span class="post-date">
+            2019-06-11
+        </span>
+      
+      <span class="post-author">— Written by ventorvar</span>
+      
     </div>
 
     
       <span class="post-tags">
         
-          #<a href="https://ventorvar.com/tags/star-citizen">Star Citizen</a>&nbsp;
+          #<a href="https://ventorvar.com/tags/star-citizen/">Star Citizen</a>&nbsp;
         
-          #<a href="https://ventorvar.com/tags/joystick-gremlin">Joystick Gremlin</a>&nbsp;
+          #<a href="https://ventorvar.com/tags/joystick-gremlin/">Joystick Gremlin</a>&nbsp;
         
-          #<a href="https://ventorvar.com/tags/hotas">HOTAS</a>&nbsp;
+          #<a href="https://ventorvar.com/tags/hotas/">HOTAS</a>&nbsp;
         
-          #<a href="https://ventorvar.com/tags/hosas">HOSAS</a>&nbsp;
+          #<a href="https://ventorvar.com/tags/hosas/">HOSAS</a>&nbsp;
         
       </span>
     
 
     
-        
-          <img src="https://cdn.discordapp.com/attachments/526695875011936279/534175949562839050/joystick-config-cover.jpg" class="post-cover" />
-        
-    
-
-    
-      <nav id="TableOfContents">
-<ul>
-<li><a href="#getting-familiar-with-joystick-gremlin">Getting familiar with Joystick Gremlin</a></li>
-<li><a href="#philosophy">Philosophy</a>
-<ul>
-<li><a href="#planning-it-out">Planning it out</a></li>
-</ul></li>
-<li><a href="#joystick-gremlin-configuration">Joystick Gremlin Configuration</a>
-<ul>
-<li><a href="#identifying-devices">Identifying Devices</a></li>
-<li><a href="#mapping-axes">Mapping Axes</a>
-<ul>
-<li><a href="#testing-it-out">Testing it out</a></li>
-<li><a href="#inverting-axes">Inverting axes</a></li>
-<li><a href="#doubling-up-inputs">Doubling up inputs</a></li>
-</ul></li>
-<li><a href="#mapping-hats">Mapping Hats</a></li>
-<li><a href="#mapping-buttons">Mapping Buttons</a></li>
-</ul></li>
-<li><a href="#configuring-star-citizen">Configuring Star Citizen</a>
-<ul>
-<li><a href="#resetting-to-keyboard-advanced">Resetting to Keyboard Advanced</a></li>
-<li><a href="#configuring-joystick-inputs">Configuring Joystick Inputs</a></li>
-<li><a href="#saving-the-configuration-for-later-use">Saving the Configuration for Later Use</a></li>
-</ul></li>
-<li><a href="#next-steps">Next Steps</a></li>
-</ul>
-</nav>
+      
+        <img src="https://cdn.discordapp.com/attachments/526695875011936279/534175949562839050/joystick-config-cover.jpg" class="post-cover" />
+      
     
 
     <div class="post-content">
-      
-
-<blockquote>
-<p><strong>Note:</strong> This is part 2 of a series. If you haven&rsquo;t already installed all
+      <blockquote>
+<p><strong>Note:</strong> This is part 2 of a series. If you haven't already installed all
 the required tools, go check out <a href="https://ventorvar.com/posts/joystick-intro/">part 1</a> first.</p>
 </blockquote>
-
+<blockquote>
+<p><strong>Just need the configs?</strong> go the to <a href="https://ventorvar.com/posts/joystick-sc-tldr/">TL;DR</a></p>
+</blockquote>
 <h1 id="getting-familiar-with-joystick-gremlin">Getting familiar with Joystick Gremlin</h1>
-
-<p>The keystone to our entire setup is <a href="https://whitemagic.github.io/JoystickGremlin/">Joystick Gremlin</a> (JG). JG allows you to remap
-inputs from your devices to other inputs on your system. For example, you can
+<p>The keystone to our entire setup is <a href="https://whitemagic.github.io/JoystickGremlin/">Joystick Gremlin</a>
+(JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can
 configure it so with you press the trigger button on your left joystick, it
 presses the <strong>Shift</strong> key on your keyboard. This opens an entire array of
-possibilities that we&rsquo;ll only begin to touch on.</p>
+possibilities that we'll only begin to touch on.</p>
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534222975533056011/joy-config-diagram.png"  class="left"  />
 
 
-
-<a href="https://cdn.discordapp.com/attachments/526695875011936279/534222975533056011/joy-config-diagram.png">
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534222975533056011/joy-config-diagram.png"  class="center"  />
-
-</a>
-
-
-
-
-
-<p>In this guide, we&rsquo;ll be configuring a profile for a single game, Star Citizen.
-Also, we&rsquo;ll be basing this guide on two Thrustmaster T16000M joysticks and
+<p>In this guide, we'll be configuring a profile for a single game, Star Citizen.
+Also, we'll be basing this guide on two Thrustmaster T16000M joysticks and
 TWCS Throttle, but the concepts being discussed here apply to any game and any
 input device.</p>
-
 <h1 id="philosophy">Philosophy</h1>
-
 <p>When configuring input devices, I prefer to keep the game as close to a
 default configuration as possible. This means if I uninstall/reinstall, or
-move between machines, I just have to have my JG profiles, and I don&rsquo;t have to
+move between machines, I just have to have my JG profiles, and I don't have to
 worry about re-configuring within the game more than I have to.</p>
-
 <p>This means that I also prefer to rebind physical joystick buttons to
 emit keyboard commands for the default key bindings rather than configure
 joystick buttons within the game.</p>
-
-<p>With Star Citizen, most of this can be achieved by loading the advanced keyboard
-and mouse profiles, but we will have to configure the joystick options as well.</p>
-
 <h2 id="planning-it-out">Planning it out</h2>
+<p>Before we start configuring JG and Star Citizen, it's good to come up with a
+plan. One of the easiest ways I've found is to use Drawings in Google Docs.</p>
 
-<p>Before we start configuring JG and Star Citizen, it&rsquo;s good to come up with a
-plan. One of the easiest ways I&rsquo;ve found is to use Drawings in Google Docs.</p>
-
-
-
-<a href="https://cdn.discordapp.com/attachments/526695875011936279/534230131795951636/Joystick_Config.png">
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534230131795951636/Joystick_Config.png"  class="center"  />
-
-</a>
+  <img src="https://cdn.discordapp.com/attachments/652921814321725454/652995104109494274/joystick_drawing.jpg"  class="left"  />
 
 
-
-
-
-<p>You can copy mine from <a href="https://bit.ly/2VS6tz2">here</a>. I label the physical
-input with the in-game action on top, and the keyboard or joystick input on
-the bottom. As you can see, most of my inputs map to keyboard commands, with
-only a few joystick buttons (J1, J2, J3, etc).</p>
-
-<blockquote>
-<p><strong>Note:</strong> I&rsquo;m constantly tweaking this Joystick Config drawing, so it may not
-match the image above, or the configurations down below.</p>
-</blockquote>
-
+<p>You can copy mine from <a href="https://docs.google.com/drawings/d/14IJUqXRCJyYPlzwZPWcJVJUpznWHdLOK20iptyyzc4g/">here</a>.
+I label the physical input with the in-game action on top, and the keyboard or joystick input on
+the bottom. As you can see, most of my inputs map to keyboard commands, with only a few joystick buttons
+(J1, J2, J3, etc). It's also useful to have a the <a href="https://cdn.discordapp.com/attachments/652921814321725454/652922995341393950/SC3_7_2_KeyMappings_v1.pdf">in-game keyboard map</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
+handy when creating this.</p>
 <h1 id="joystick-gremlin-configuration">Joystick Gremlin Configuration</h1>
-
 <h2 id="identifying-devices">Identifying Devices</h2>
-
-<p>First, we&rsquo;re going to configure the two joysticks. There is a small controller
+<p>First, we're going to configure the two joysticks. There is a small controller
 icon under the menu bar that can be black or green. This is the <strong>Activate</strong>
 button. When activated, the button will be green and will process all inputs
-as configured. To work on our configuration, though, we&rsquo;re going to deactivate
+as configured. To work on our configuration, though, we're going to deactivate
 JG, making sure the button is black.</p>
 
-
-
-<a href="https://cdn.discordapp.com/attachments/526695875011936279/534227285910224896/jg_activate_button.PNG">
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534227285910224896/jg_activate_button.PNG"  class="center"  />
-
-</a>
-
-
-
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534227285910224896/jg_activate_button.PNG"  class="left"  />
 
 
 <p>In JG we have two tabs for our joysticks. The way to tell them apart is select
 of the tabs, then move the left and right joysticks one at a time. When moving
 or pressing buttons, JG will select the physical input on the left side that
-corresponds with the input you&rsquo;re creating on your joystick. When you&rsquo;ve
+corresponds with the input you're creating on your joystick. When you've
 determined which joystick is which, use the <strong>Device Label</strong> field under the
 tabs as a reminder.</p>
-
 <h2 id="mapping-axes">Mapping Axes</h2>
-
-<p>One of the more complex mappings are the axes. We&rsquo;ll be mapping the roll, pitch
-and yaw axes from our left and right joysticks onto a single vJoy device. We&rsquo;ll
-be using this standardized frame reference<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
-
+<p>One of the more complex mappings are the axes. We'll be mapping the roll, pitch
+and yaw axes from our left and right joysticks onto a single vJoy device. We'll
+be using this standardized frame reference<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p><a href="https://en.wikipedia.org/wiki/Axes_conventions#/media/File:RPY_angles_of_spaceships_(local_frame).png">
-
-  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/RPY_angles_of_spaceships_%28local_frame%29.png"  class="center"  />
-
-
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/RPY_angles_of_spaceships_%28local_frame%29.png"  class="left"  />
 
 </a></p>
-
 <p>On your right joystick:</p>
-
 <ul>
 <li>Move the stick to determine the <strong>pitch</strong> (front to back) physical input
 (it will be Axis 2)</li>
@@ -283,106 +214,64 @@ be using this standardized frame reference<sup class="footnote-ref" id="fnref:1"
 <li>Select <strong>Remap</strong> from the <strong>action</strong> (left) dropdown, and click <strong>Add</strong></li>
 <li>In the new <strong>Remap</strong> action form, choose <strong>vJoy Device 1</strong>, <strong>Axis Y</strong></li>
 </ul>
-
 <p>Repeat these steps for <strong>roll</strong> (side to side) to the <strong>X</strong> axis and <strong>yaw</strong>
 (twist) to the <strong>Z</strong> axis</p>
 
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534239533080772608/jg_axes_map.PNG"  class="left"  />
 
 
-<a href="https://cdn.discordapp.com/attachments/526695875011936279/534239533080772608/jg_axes_map.PNG">
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534239533080772608/jg_axes_map.PNG"  class="center"  />
-
-</a>
-
-
-
-
-
-<p>On your left joystick we&rsquo;ll be configuring strafe forward/back, left/right and
+<p>On your left joystick we'll be configuring strafe forward/back, left/right and
 up/down. Follow the same steps from above, except on your left joystick and
 mapping:</p>
-
 <ul>
 <li>Forward/Back -&gt; <strong>vJoy Device 1</strong>, <strong>Axis X Rotation</strong></li>
 <li>Left/Right -&gt; <strong>vJoy Device 1</strong>, <strong>Axis Y Rotation</strong></li>
 <li>Up/Down -&gt; <strong>vJoy Device 1</strong>, <strong>Axis Z Rotation</strong></li>
 </ul>
-
 <h3 id="testing-it-out">Testing it out</h3>
-
 <p>To test our configuration, open the <strong>Monitor vJoy</strong> application. Ensure to
 <strong>activate</strong> JG by clicking the <strong>activate</strong> button which turns it green. Now
 when you move your left and right joysticks, you should see the corresponding
 axis move in the vJoy monitor.</p>
-
 <h3 id="inverting-axes">Inverting axes</h3>
-
-<p>If we loaded this up right now and tried it out in Star Citizen we&rsquo;d find that
+<p>If we loaded this up right now and tried it out in Star Citizen we'd find that
 the strafe Forward/Back and Up/Down would be reversed. Rather than fixing this
 in game, we can fix it in JG by inverting the curve. To do that:</p>
-
 <ul>
 <li>Select the <strong>Strafe Forward/Back</strong> action</li>
 <li>Within the <strong>Remap</strong> action that has already been configured, select
 <strong>Responsive Curve</strong> from the action dropdown and click <strong>Add</strong></li>
 <li>Click the <strong>invert</strong> button in the <strong>Response Curve</strong> action form</li>
 </ul>
-
 <p>Repeat the steps for the <strong>Strafe Up/Down</strong> input</p>
 
-
-
-<a href="https://cdn.discordapp.com/attachments/526695875011936279/534243371959713792/jg_response_curve.PNG">
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534243371959713792/jg_response_curve.PNG"  class="center"  />
-
-</a>
-
-
-
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534243371959713792/jg_response_curve.PNG"  class="left"  />
 
 
 <h3 id="doubling-up-inputs">Doubling up inputs</h3>
-
 <p>I want to be able to strafe in all directions from my throttle as well. To do
 this I just had to bind the axes on the throttle to the same axes that I bound
 my left controller to. Since the game will be configured just to use the
-rotational axes, it doesn&rsquo;t matter which physical input is the one manipulating
-the virtual interface. This is how I&rsquo;m able to control the same functions from
+rotational axes, it doesn't matter which physical input is the one manipulating
+the virtual interface. This is how I'm able to control the same functions from
 multiple devices at once.</p>
-
 <h2 id="mapping-hats">Mapping Hats</h2>
-
 <p>In order to use the hats like other buttons, you need to configure them first.</p>
-
 <ul>
 <li>Select the <strong>Hat 1</strong> on the right stick</li>
 <li>Select <strong>Hat Buttons</strong> from the <strong>containers</strong> dropdown (to the right of the
 actions dropdown) and click <strong>Add</strong></li>
 </ul>
 
-
-
-<a href="https://cdn.discordapp.com/attachments/526695875011936279/534250224923967489/jg_hats.PNG">
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534250224923967489/jg_hats.PNG"  class="center"  />
-
-</a>
-
-
-
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534250224923967489/jg_hats.PNG"  class="left"  />
 
 
 <p>You can now treat the individual directions of the hat as buttons using the
 following instructions.</p>
-
 <h2 id="mapping-buttons">Mapping Buttons</h2>
-
 <p>Joystick buttons can be mapped in two different ways (for our use case). If
-we&rsquo;re mapping a physical button to a vJoy button (for instance the trigger on
+we're mapping a physical button to a vJoy button (for instance the trigger on
 the right stick), this would use the <strong>remap</strong> action.</p>
-
 <ul>
 <li>Find the right trigger physical input but clicking <strong>Button 1</strong> on the left,
 or by physically pressing the trigger button while the <strong>Right</strong> joystick
@@ -390,96 +279,64 @@ tab is selected</li>
 <li>Select the <strong>Remap</strong> action and click <strong>Add</strong></li>
 <li>Configure the <strong>Remap</strong> form to <strong>vJoy Device 1</strong> and <strong>Button 1</strong></li>
 </ul>
-
-<p>If we&rsquo;re mapping a physical input to a keyboard command, then we use the <strong>map
+<p>If we're mapping a physical input to a keyboard command, then we use the <strong>map
 to keyboard</strong> action.</p>
-
 <ul>
-<li>Find the bottom right-most button on the left joystick by physically pressing
-the trigger button while the <strong>Left</strong> joystick tab is selected (Button 10)</li>
+<li>Find the <strong>Gimbal Lock</strong> button on the left joystick by physically pressing
+the bottom right-most button on the right side buttong group while the <strong>Left</strong> joystick tab is selected (Button 10)</li>
 <li>Select the <strong>Map to Keyboard</strong> action and click <strong>Add</strong></li>
 <li>Press the <strong>Record keys</strong> button in the <strong>Map to Keyboard</strong> form</li>
-<li>Press <strong>Left Alt + J</strong> on your keyboard and release</li>
+<li>Press <strong>Left Alt + R</strong> on your keyboard and release</li>
 </ul>
 
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534246929622892555/jg_gimbal_lock.PNG"  class="left"  />
 
 
-<a href="https://cdn.discordapp.com/attachments/526695875011936279/534246929622892555/jg_gimbal_lock.PNG">
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534246929622892555/jg_gimbal_lock.PNG"  class="center"  />
-
-</a>
-
-
-
-
-
-<p>Continue this process for every physical button you&rsquo;d like to configure. For
+<p>Continue this process for every physical button you'd like to configure. For
 Star Citizen (3.4), you can use <a href="https://imgur.com/a/v4eofhx">this</a> as a good
-reference. However, key bindings change frequently and I&rsquo;d advise you try to
+reference. However, key bindings change frequently and I'd advise you try to
 find a current version of the advanced key bindings.</p>
-
 <h1 id="configuring-star-citizen">Configuring Star Citizen</h1>
-
 <p>At this point, you should have every physical button that you want to configure
-either <strong>remap</strong>&rsquo;d to the vJoy device, or to a keyboard press. Now we&rsquo;ll go into
+either <strong>remap</strong>&lsquo;d to the vJoy device, or to a keyboard press. Now we'll go into
 Star Citizen and do some final configurations.</p>
-
-<h2 id="resetting-to-keyboard-advanced">Resetting to Keyboard Advanced</h2>
-
-<p>First, we&rsquo;ll reset the Star Citizen configuration, and load the advanced
-keyboard controls.</p>
-
+<p>Ensure that JG is in the <strong>active</strong> state. The <strong>Activate</strong> button should be
+green and the <strong>Status</strong> at the bottom left of the window should be
+<strong>Running and Active</strong>.</p>
+<h2 id="resetting-to-sc-defaults">Resetting to SC defaults</h2>
+<p>First, we'll reset the Star Citizen configuration.</p>
 <ul>
-<li>Delete your <strong>USER</strong> folder (within your RSI installation folder
-<code>RSI\StarCitizen\LIVE\USER</code>)</li>
+<li>Delete your <strong>USER</strong> folder (within your RSI installation folder <code>RSI\StarCitizen\LIVE\USER</code>)</li>
 <li>Launch Star Citizen</li>
-<li>Choose <strong>OPTIONS</strong>, then the <strong>KEYBINDINGS</strong> tab and click <strong>ADVANCED
-CONTROLS CUSTOMIZATION</strong></li>
-<li>Click the button on the right that says <strong>&gt; CONTROL PROFILES</strong></li>
-<li>Scroll down and choose <strong>Keyboard Advanced</strong></li>
-<li>Choose <strong>Keyboard</strong> and <strong>Mouse</strong> in the two dropdowns on the right and click
-load</li>
 </ul>
-
-
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534482961219846165/sc_adv_keyboard.png"  class="center"  />
-
-
-
-
-
 <blockquote>
 <p><strong>Note:</strong> It is my preference to unbind the mouse from pitch/yaw which allows
 you to look around with the mouse without worrying about the ship moving. To
-do this, after you you&rsquo;ve loaded the advanced controls expand <strong>Flight -
-Movement</strong>, clear <strong>Pitch</strong> and <strong>Yaw</strong> by selecting the item with a left
-click, then right-clicking on the item</p>
+do this, after you've reset the controls, in <strong>Options &gt; KEYBINDINGS &gt; ADVANCED CONTROLS CUZTOMIZATION</strong>
+make sure you're on the <strong>Keyboard / Mouse</strong> configuration in the bottom right, then expand <strong>Flight -
+Movement</strong> and clear <strong>Pitch</strong> and <strong>Yaw</strong> by selecting the item with a left click, then right-clicking on the item</p>
 </blockquote>
-
-<p>Now all of the keyboard mappings we&rsquo;ve created in JG should match up to their
+<p>Now all of the keyboard mappings we've created in JG should match up to their
 in-game equivalents.</p>
-
 <h2 id="configuring-joystick-inputs">Configuring Joystick Inputs</h2>
-
 <p>Still in the <strong>ADVANCED CONTROLS CUSTOMIZATION</strong> UI, use the right arrow in the
 bottom right button that currently says <strong>Keyboard / Mouse</strong> to select
-**Joystick / HOTAS **. None of the built-in control profiles match our purpose,
-so we&rsquo;re going to completely clear the joystick configuration, and configure
-the vJoy inputs that we&rsquo;ve configured. There are also a few things that don&rsquo;t
-have a keyboard command configured by default, so we&rsquo;ve set them to a joystick
+<strong>Joystick / HOTAS</strong>. None of the built-in control profiles match our purpose,
+so we're going to completely clear the joystick configuration, and configure
+the vJoy inputs that we've configured. There are also a few things that don't
+have a keyboard command configured by default, so we've set them to a joystick
 button.</p>
-
 <ul>
-<li>Expand each configuration section, and clear all entries by left clicking on
-an item, then right-clicking on it</li>
-<li>While clearing out the configuration, assign certain item using the following
-table. Do this by clicking on the item twice, then moving the joystick in the
-desired axis, or pressing the intended button. Use your joystick configuration
-map for a reference.</li>
+<li>Click the button on the right that says <strong>&gt; CONTROL PROFILES</strong></li>
+<li>Scroll down and choose <strong>Clear All Device Bindings</strong></li>
+<li>For each <strong>Joystick</strong> listed on the left side, choose the button next to it that says <strong>None</strong> and change it to <strong>JoyStick</strong></li>
 </ul>
-
+<p>Now that the controls are cleared, we must assign certain bindings using the following table. Do this by clicking on
+the item twice, then moving the joystick in the desired axis, or pressing the intended button. Use your joystick
+configuration map for a reference.</p>
+<blockquote>
+<p><strong>Note:</strong> You will get a message that things have already been bound and if that's ok. Always press yes.</p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -488,248 +345,192 @@ map for a reference.</li>
 <th>Binding</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Flight - View</td>
 <td>Look left / right</td>
 <td>Z-Axis</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Look up / down</td>
 <td>Y-Axis</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Look Behind</td>
 <td>Button 19</td>
 </tr>
-
 <tr>
 <td>Flight - Movement</td>
 <td>Pitch</td>
 <td>Y-Axis</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Yaw</td>
 <td>Z-Axis</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Roll</td>
 <td>X-Axis</td>
 </tr>
-
 <tr>
 <td></td>
-<td>Throttle up / down (abs.)</td>
+<td>Speed Limiter (Abs.)</td>
 <td>Slider 1</td>
 </tr>
-
+<tr>
+<td></td>
+<td>Acceleration Limiter (Abs.)</td>
+<td>Slider 2 (Dial)</td>
+</tr>
 <tr>
 <td></td>
 <td>Strafe up / down</td>
 <td>Z-Axis Rotation</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Strafe left / right</td>
 <td>Y-Axis Rotation</td>
 </tr>
-
 <tr>
 <td></td>
-<td>Strafe forward / back</td>
+<td>Throttle forward / back</td>
 <td>X-Axis Rotation</td>
 </tr>
-
 <tr>
 <td></td>
 <td>G-force safety (Toggle)</td>
 <td>Button 30</td>
 </tr>
-
-<tr>
-<td></td>
-<td>Decoupled strafe up / down</td>
-<td>Z-Axis Rotation</td>
-</tr>
-
-<tr>
-<td></td>
-<td>Decoupled strafe left / right</td>
-<td>Y-Axis Rotation</td>
-</tr>
-
-<tr>
-<td></td>
-<td>Decoupled strafe forward / back</td>
-<td>X-Axis Rotation</td>
-</tr>
-
-<tr>
-<td></td>
-<td>Decoupled yaw</td>
-<td>Z-Axis</td>
-</tr>
-
-<tr>
-<td></td>
-<td>Decoupled pitch</td>
-<td>Y-Axis</td>
-</tr>
-
-<tr>
-<td></td>
-<td>Decoupled roll</td>
-<td>X-Axis</td>
-</tr>
-
 <tr>
 <td>Flight - Targeting</td>
-<td>Scanning Radar Ping</td>
-<td>Button 1</td>
-</tr>
-
-<tr>
-<td></td>
-<td>Scanning Increase Radar Angle</td>
-<td>Button 3</td>
-</tr>
-
-<tr>
-<td></td>
-<td>Scanning Decrease Radar Angle</td>
-<td>Button 4</td>
-</tr>
-
-<tr>
-<td>Mining</td>
-<td>Fire Mining Laster (Toggle)</td>
-<td>Button 1</td>
-</tr>
-
-<tr>
-<td></td>
-<td>Switch Mining Laser (Toggle)</td>
-<td>Button 2</td>
-</tr>
-
-<tr>
-<td></td>
-<td>Increase / Decrease Mining Laser Power</td>
-<td>Slider 2</td>
-</tr>
-
-<tr>
-<td>Flight - Turrets</td>
 <td>Aim left / right</td>
-<td>Z-Axis</td>
+<td>X-Axis</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Aim up / down</td>
 <td>Y-Axis</td>
 </tr>
-
+<tr>
+<td></td>
+<td>Scanning Radar Ping</td>
+<td>Button 1</td>
+</tr>
+<tr>
+<td></td>
+<td>Scanning Increase Radar Angle</td>
+<td>Button 3</td>
+</tr>
+<tr>
+<td></td>
+<td>Scanning Decrease Radar Angle</td>
+<td>Button 2</td>
+</tr>
+<tr>
+<td>Mining</td>
+<td>Fire Mining Laster (Toggle)</td>
+<td>Button 1</td>
+</tr>
+<tr>
+<td></td>
+<td>Switch Mining Laser (Toggle)</td>
+<td>Button 2</td>
+</tr>
+<tr>
+<td></td>
+<td>Increase / Decrease Mining Laser Power</td>
+<td>Slider 2</td>
+</tr>
+<tr>
+<td>Flight - Turrets</td>
+<td>Aim left / right</td>
+<td>X-Axis</td>
+</tr>
+<tr>
+<td></td>
+<td>Aim up / down</td>
+<td>Y-Axis</td>
+</tr>
 <tr>
 <td>Flight - Weapons</td>
 <td>Fire Weapon Group 1</td>
 <td>Button 1</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Fire Weapon Group 2</td>
 <td>Button 3</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Acquire missile lock</td>
 <td>Button 2</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Launch missile</td>
 <td>Button 2</td>
 </tr>
-
 <tr>
 <td>Ground Vehicle - General</td>
 <td>Look left / right</td>
-<td>Z-Axis</td>
+<td>X-Axis</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Look up / down</td>
 <td>Y-Axis</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Look behind</td>
 <td>Button 19</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Fire Weapon Group 1</td>
 <td>Button 1</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Fire Weapon Group 2</td>
 <td>Button 3</td>
 </tr>
-
 <tr>
 <td>Ground Vehicle - Movement</td>
 <td>Drive Forward / Backward</td>
 <td>Y-Axis</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Turn Left / Right</td>
 <td>Z-Axis</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Primary Fire</td>
 <td>Button 1</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Secondary Fire</td>
 <td>Button 3</td>
 </tr>
-
 <tr>
 <td>Ground Vehicle - Gunner</td>
 <td>Primary Fire</td>
 <td>Button 1</td>
 </tr>
-
 <tr>
 <td></td>
 <td>Secondary Fire</td>
 <td>Button 3</td>
 </tr>
-
 <tr>
 <td>Social - General</td>
 <td>Re-spawn</td>
@@ -737,12 +538,9 @@ map for a reference.</li>
 </tr>
 </tbody>
 </table>
-
 <h2 id="saving-the-configuration-for-later-use">Saving the Configuration for Later Use</h2>
-
 <p>In Star Citizen, you can save your current configuration as a control profile to
 reload later. At the main menu:</p>
-
 <ul>
 <li>Choose <strong>OPTIONS</strong>, then the <strong>KEYBINDINGS</strong> tab and click <strong>ADVANCED
 CONTROLS CUSTOMIZATION</strong></li>
@@ -752,27 +550,40 @@ CONTROLS CUSTOMIZATION</strong></li>
 <li>Copy the control settings profile from the
 <code>RSI\StarCitizen\LIVE\USER\Controls\Mappings</code> folder.</li>
 </ul>
-
 <p>Whenever you need to delete your <strong>USER</strong> folder, simply copy the
-<strong>layout_*_exported.yml</strong> back into the <code>USER\Controls\Mappings</code> folder and
-use the <strong>CONTROL PROFILES</strong> button in Star Citizen like you did to load the
+**layout_*_exported.yml** back into the <code>USER\Controls\Mappings</code> folder and
+use the **CONTROL PROFILES** button in Star Citizen like you did to load the
 advanced keyboard controls above.</p>
-
 <h1 id="next-steps">Next Steps</h1>
+<h2 id="advanced-axis-curves">Advanced Axis Curves</h2>
+<p>In my configuration, I use a custome response curve for the <strong>Speed Limiter</strong> axis (Z-Axis on the Throttle
+mapped to Slider) so that I can have more precise control over the lower 1/8th of the limiter region. This is done the
+same way we inverted the axes above, except we configure it at as <strong>Cubic Bezier Spline</strong> curve and use the control
+points to adjust the response curve to our liking. This is very much personal preference, but you can see what I've
+done for the speed limiter as a reference. (You'll note that this is also inverted, which is the way SC requires it)</p>
 
-<p>Now that we&rsquo;ve got our base JG profiles configured and can play the game, we
-can start tweaking the configuration for specific situations in the game. In
-the next guide we&rsquo;ll cover creating custom modes for mining and a precision mode
-for dogfighting that will give us better accuracy while firing weapons.</p>
-<div class="footnotes">
+  <img src="https://cdn.discordapp.com/attachments/652921814321725454/652990562554740756/JG_Speed_Limit_Curve.PNG"  class="left"  />
 
-<hr />
 
+<h2 id="future-thoughts">Future Thoughts</h2>
+<p>Now that we've got our base JG profiles configured and can play the game, we
+can start tweaking the configuration for specific situations in the game. In a
+future guide we'll cover creating custom modes for mining, a director mode and a
+precision mode for dogfighting that will give us better accuracy while firing weapons.</p>
+<blockquote>
+<p><strong>Need Help? Have an issue/comment?</strong> Feel free to join my Discord: <a href="https://discord.gg/CVBMxJq">https://discord.gg/CVBMxJq</a></p>
+</blockquote>
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1"><a href="https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation">https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation</a>
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation">https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation</a><a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://www.reddit.com/r/starcitizen/comments/e0zrde/sc_372_keyboard_mouse_gamepad_and_joystick/">https://www.reddit.com/r/starcitizen/comments/e0zrde/sc_372_keyboard_mouse_gamepad_and_joystick/</a><a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
     </div>
     
@@ -784,22 +595,32 @@ for dogfighting that will give us better accuracy while firing weapons.</p>
         <div class="pagination__buttons">
           
             <span class="button previous">
-              <a href="https://ventorvar.com/posts/joystick-intro/">
+              <a href="https://ventorvar.com/posts/joystick-sc-tldr/">
                 <span class="button__icon">←</span>
-                <span class="button__text">Intro to Advanced Joystick Configs - Part 1</span>
+                <span class="button__text">TL;DR - Advanced Joystick Configs for Star Citizen </span>
               </a>
             </span>
           
           
+            <span class="button next">
+              <a href="https://ventorvar.com/posts/joystick-intro/">
+                <span class="button__text">Intro to Advanced Joystick Configs - Part 1</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
         </div>
       </div>
     
-  </div>
 
-  </div>
+    
 
-  
-    <footer class="footer">
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
   <div class="footer__inner">
     
       <div class="copyright copyright--user"> </div>
@@ -807,15 +628,13 @@ for dogfighting that will give us better accuracy while firing weapons.</p>
   </div>
 </footer>
 
-
-  <script src="/assets/main.js"></script>
-
-  <script src="/assets/prism.js"></script>
+<script src="https://ventorvar.com/assets/main.js"></script>
+<script src="https://ventorvar.com/assets/prism.js"></script>
 
 
+      
+    </div>
 
-  
-</div>
-
-</body>
+    
+  </body>
 </html>

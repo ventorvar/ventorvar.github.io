@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ventorvar Gaming</title>
@@ -7,24 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
-    <lastBuildDate>Fri, 11 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ventorvar.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hosas</title>
+      <title>HOSAS</title>
       <link>https://ventorvar.com/tags/hosas/</link>
-      <pubDate>Fri, 11 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/tags/hosas/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hotas</title>
+      <title>HOTAS</title>
       <link>https://ventorvar.com/tags/hotas/</link>
-      <pubDate>Fri, 11 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/tags/hotas/</guid>
       <description></description>
@@ -33,7 +33,7 @@
     <item>
       <title>Joystick Gremlin</title>
       <link>https://ventorvar.com/tags/joystick-gremlin/</link>
-      <pubDate>Fri, 11 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/tags/joystick-gremlin/</guid>
       <description></description>
@@ -42,7 +42,7 @@
     <item>
       <title>Star Citizen</title>
       <link>https://ventorvar.com/tags/star-citizen/</link>
-      <pubDate>Fri, 11 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/tags/star-citizen/</guid>
       <description></description>
