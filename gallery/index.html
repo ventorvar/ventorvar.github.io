@@ -6,7 +6,7 @@
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content=" (function() { Galleria.run(&#39;.galleria&#39;); }());  "/>
+<meta name="description" content=" (function() { Galleria.run(&#39;.galleria&#39;, { autoplay: 7000, overlayBackground: &#34;#000&#34;, imagePan: true }); }());  "/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://ventorvar.com/gallery/" />
@@ -27,12 +27,12 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Gallery"/>
-<meta name="twitter:description" content=" (function() { Galleria.run(&#39;.galleria&#39;); }());  "/>
+<meta name="twitter:description" content=" (function() { Galleria.run(&#39;.galleria&#39;, { autoplay: 7000, overlayBackground: &#34;#000&#34;, imagePan: true }); }());  "/>
 
 
 
 <meta property="og:title" content="Gallery" />
-<meta property="og:description" content=" (function() { Galleria.run(&#39;.galleria&#39;); }());  " />
+<meta property="og:description" content=" (function() { Galleria.run(&#39;.galleria&#39;, { autoplay: 7000, overlayBackground: &#34;#000&#34;, imagePan: true }); }());  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ventorvar.com/gallery/" />
 <meta property="article:published_time" content="2019-12-14T15:28:57-05:00" />
@@ -133,7 +133,7 @@
     <div class="post-content">
       
 
-<div class="galleria" style="width: 700px; height: 400px; background: #000">
+<div class="galleria" style="width: 100%; height: 60vh; max-height: 600px; background: #000">
     <img alt="Star Citizen 3.8.0 - 890 Jump over Hurston" src="https://cdn.discordapp.com/attachments/655259043920609320/655877229418381342/Squadron_42_-_Star_Citizen_Screenshot_2019.12.14_-_10.01.08.60.jpg">
     <img alt="Star Citizen 3.8.0 - 890 Jump over Microtech" src="https://cdn.discordapp.com/attachments/655259043920609320/655877224183889942/Squadron_42_-_Star_Citizen_Screenshot_2019.12.13_-_22.46.45.71.jpg">
     <img alt="Star Citizen 3.8.0 - 890 Jump over New Babbage on Microtech" src="https://cdn.discordapp.com/attachments/655259043920609320/655877226860118017/Squadron_42_-_Star_Citizen_Screenshot_2019.12.13_-_22.54.01.85.jpg">
@@ -145,7 +145,11 @@
 
 <script type="text/javascript">
 (function() {
-    Galleria.run('.galleria');
+    Galleria.run('.galleria', {
+        autoplay: 7000,
+        overlayBackground: "#000",
+        imagePan: true
+    });
 }());
 </script>
 

@@ -18,7 +18,7 @@
       <pubDate>Sat, 14 Dec 2019 15:28:57 -0500</pubDate>
       
       <guid>https://ventorvar.com/gallery/</guid>
-      <description> (function() { Galleria.run(&#39;.galleria&#39;); }());  </description>
+      <description> (function() { Galleria.run(&#39;.galleria&#39;, { autoplay: 7000, overlayBackground: &#34;#000&#34;, imagePan: true }); }());  </description>
     </item>
     
     <item>
