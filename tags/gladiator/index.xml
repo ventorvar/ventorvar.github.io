@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gladiator on Ventorvar Gaming</title>
+    <link>https://ventorvar.com/tags/gladiator/</link>
+    <description>Recent content in Gladiator on Ventorvar Gaming</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright> </copyright>
+    <lastBuildDate>Fri, 12 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ventorvar.com/tags/gladiator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Gladiator K from VKB</title>
+      <link>https://ventorvar.com/posts/gladiator-k/</link>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ventorvar.com/posts/gladiator-k/</guid>
+      <description>Star Citizen Advanced Controls Configuration </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,8 +6,9 @@
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Just need the configs? go the to TL;DR
- The Problem We&#39;re Trying to Solve Using multiple joysticks on Windows can be a huge pain. There is no guarantee of the input device order when your machine reboots or when they&#39;re plugged, even if you follow the same order every time. This is compounded for Star Citizen where you&#39;re asked to remove the USER folder each time there is an update, and the configuration interface has a long way to go before it&#39;s not a pain to use."/>
+<meta name="description" content="Just need the configs? For SC head to TL;DR
+  A note on the update: If you followed the previous version of this guide, you no longer need HidGuardian! Also Joystick Gremlin no longer needs to run as an administrator.
+ The Problem We&#39;re Trying to Solve Using multiple joysticks on Windows can be a huge pain. There is no guarantee of the input device order when your machine reboots or when they&#39;re plugged, even if you follow the same order every time."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://ventorvar.com/posts/joystick-intro/" />
@@ -38,8 +39,8 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ventorvar.com/posts/joystick-intro/" />
-<meta property="article:published_time" content="2019-12-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-12-06T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-09-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-25T00:00:00+00:00" />
 
 
 
@@ -122,7 +123,7 @@
     <div class="post-meta">
       
         <span class="post-date">
-            2019-12-06
+            2020-09-25
         </span>
       
       <span class="post-author">— Written by ventorvar</span>
@@ -151,7 +152,11 @@
 
     <div class="post-content">
       <blockquote>
-<p><strong>Just need the configs?</strong> go the to <a href="https://ventorvar.com/posts/joystick-sc-tldr/">TL;DR</a></p>
+<p><strong>Just need the configs?</strong> For SC head to <a href="https://ventorvar.com/posts/joystick-sc-tldr/">TL;DR</a></p>
+</blockquote>
+<blockquote>
+<p><strong>A note on the update:</strong> If you followed the previous version of this guide, you no longer need HidGuardian! Also
+Joystick Gremlin no longer needs to run as an administrator.</p>
 </blockquote>
 <h1 id="the-problem-were-trying-to-solve">The Problem We're Trying to Solve</h1>
 <p>Using multiple joysticks on Windows can be a huge pain. There is no guarantee of
@@ -174,12 +179,13 @@ installed, and give you enough understanding of the components to tweak and
 build your own configurations. I'll be supplying my configurations as a quick
 starting off point though.</p>
 <p>My setup consists the <a href="https://amzn.com/B01N2PE8CZ">Thrustmaster T16000M FCS Flight Pack</a> with an additional
-<a href="https://amzn.com/B01MQEDEEW">Thrustmaster T16000M</a> giving me:</p>
+<a href="https://amzn.com/B01MQEDEEW">Thrustmaster T16000M</a>, as well as two
+<a href="https://vkbcontrollers.com/?product=scg-space-combat-grip-kosmosima-stand-alone">VKB Gladiator Ks</a> giving me:</p>
 <ul>
 <li>Throttle</li>
 <li>Pedals</li>
-<li>Left Joystick</li>
-<li>Right Joystick</li>
+<li>Left Joystick (T16K or VKB Gladiator K LH)</li>
+<li>Right Joystick (T16K or VKB Gladiator K RH)</li>
 </ul>
 
   <img src="https://images-na.ssl-images-amazon.com/images/I/91so7Q7rm6L._SL1500_.jpg"  class="left"  />
@@ -203,8 +209,8 @@ easily.</p>
 do these steps once. We'll be using three tools for our setup.</p>
 <ul>
 <li>vJoy</li>
-<li>HidGuardian</li>
 <li>Joystick Gremlin</li>
+<li>devreorder</li>
 </ul>
 <p>vJoy is a virtual joystick device for windows that is going to allow the inputs
 from all of our separate physical devices to be mapped to a single virtual
@@ -215,37 +221,15 @@ reconnect them.</p>
 mean that games don't stop seeing the original inputs too. This means that
 you'll have a difficult time guaranteeing that you can get the game to
 only use the vJoy inputs, rather than the device inputs. To solve that issue,
-we're going to use a Windows filter driver called <a href="https://github.com/ViGEm/HidGuardian">HidGuardian</a>
-which acts as a sort of firewall, only allowing configured applications to see specific devices.</p>
-<h2 id="install-hidguardian">Install HidGuardian</h2>
-<blockquote>
-<p><strong>Note:</strong> If HidGuardian does not work well on your system, there is a
-work around for Star Citizen at least. SC will only see devices that are
-present when it is launched. Therefore you can launch SC, then attach your
-devices. You'll still have to make sure they are loaded correctly in JG,
-however</p>
-</blockquote>
-<p>The <em>easiest</em> way to install <strong>HidGuardian</strong> is to use <a href="https://www.autohotkey.com/boards/viewtopic.php?t=34890">WhiteKnight</a>
-utility. You don't need to follow the directions, just download the tool and follow these:</p>
-<ul>
-<li>Extract <strong>WhiteKnight</strong></li>
-<li>Run <strong>AutoWhitelister.exe</strong></li>
-<li>Click <strong>Install</strong> next to <strong>HidGuardian Install state:  Not Installed</strong></li>
-<li>Close <strong>WhiteKnight</strong></li>
-</ul>
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534163838862491658/whiteknight_install.png"  class="left"  />
-
-
-<blockquote>
-<p><strong>Note:</strong>
-If you'd rather install this manually, you can follow the instructions on vigem's forums
-<a href="https://forums.vigem.org/topic/271/hidguardian-v1-driver-installation">here</a></p>
-</blockquote>
+we're going to use dinput8 DLL wrapper called <a href="https://github.com/briankendall/devreorder">devreorder</a>
+which acts as a sort of firewall, only allowing configured applications to see
+specific devices, as well as guaranteeing the order of the devices we <em>do</em> want
+the game to see.</p>
 <h2 id="install-vjoy">Install vJoy</h2>
 <p>Installing vJoy is a more straight forward matter:</p>
 <ul>
-<li>Install the latest <a href="https://github.com/shauleiz/vJoy">vJoy</a> release. Use the <a href="https://github.com/jshafer817/vJoy/releases">jshafer817</a> branch if you're running the latest version of Windows 10</li>
+<li>Install the latest <a href="https://github.com/shauleiz/vJoy">vJoy</a> release. Use the
+<a href="https://github.com/jshafer817/vJoy/releases">jshafer817</a> fork if you're running the latest version of Windows 10</li>
 <li>Run <strong>Configure vJoy</strong> from the Start menu
 <ul>
 <li>Make sure the <strong>Enable vJoy</strong> box is checked at the bottom left of the window</li>
@@ -267,43 +251,49 @@ If you'd rather install this manually, you can follow the instructions on vigem'
 
 <blockquote>
 <p><strong>Note:</strong> While you can definitely setup multiple vJoy devices, you could run into the same problem of your game not
-correctly ordering them, so beware.</p>
+correctly ordering them. So make sure you configure devreorder to preserve the order of the multiple vJoy devices.</p>
 </blockquote>
-<h2 id="install-joystick-gremlin">Install Joystick Gremlin</h2>
-<ul>
-<li><a href="https://whitemagic.github.io/JoystickGremlin/download/">https://whitemagic.github.io/JoystickGremlin/download/</a></li>
-<li>Launch <strong>Joystick Gremlin</strong> in admin mode</li>
-<li>Under the <strong>Tools</strong> menu, click <strong>Options</strong>
-<ul>
-<li>Select the <strong>HidGuardian</strong> Tab
-<ul>
-<li>Check boxes for each device type you want to use. For my setup, I have a
-box for <strong>T.16000M</strong> and a box for <strong>TWCS Throttle</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Unplug all of your devices</li>
-<li>Plug your devices back in</li>
-</ul>
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534164216224022542/jg_hidguardian.PNG"  class="left"  />
-
-
-<p>Because we're using <strong>HidGuardian</strong>, <strong>Joystick Gremlin</strong> must always be run as an
-administrator. To make this easier, we can modify the shortcut so that it will
-always start that way.</p>
-<ul>
-<li>Open Start and find <strong>Joystick Gremlin</strong></li>
-<li>Right-click the shortcut and select <strong>Properties</strong></li>
-<li>Select the <strong>Compatibility</strong> tab</li>
-<li>Check the box for <strong>Run this program as an administrator</strong></li>
-<li>Click <strong>Apply</strong> and <strong>OK</strong></li>
-</ul>
+<h2 id="setting-up-devreorder">Setting up devreorder</h2>
 <blockquote>
-<p><strong>Note:</strong> If you ever run <strong>Joystick Gremlin</strong> and down see your joysticks,
-double check that you're running it as an administrator.</p>
+<p><strong>Note:</strong> If devreorder doesn't work with your game, <a href="https://ventorvar.com/posts/hidguardian-tutorial/">HidGuardian</a> is
+another option to hide inputs from your game</p>
 </blockquote>
+<ul>
+<li>Download the latest release <a href="https://github.com/briankendall/devreorder/releases">here</a> (the zip file)</li>
+<li>Unzip <code>x64/dinput8.dll</code> to your Star Citizen <code>LIVE\Bin64</code> folder next to <code>StarCitizen.exe</code></li>
+<li>Unzip <code>devreorder.ini</code> to your Star Citzen <code>LIVE</code> folder (where <code>Data.p4k</code> is)</li>
+</ul>
+<h3 id="configure-devreorder">Configure devreorder</h3>
+<ul>
+<li>Use the <code>DeviceLister</code> tool in the <code>devreorder</code> release zip to list active joystick devices.</li>
+</ul>
+
+  <img src="https://cdn.discordapp.com/attachments/652921814321725454/759469426235015188/unknown.png"  class="left"  />
+
+
+<ul>
+<li>Edit <code>devreorder.ini</code> in our SC <code>LIVE</code> folder, and copy the <code>vJoy Device</code> GUID (including the brackets, e.g.
+<code>{a3c2c570-0f81-11ea-800a-444553540000}</code>) to the <code>[visible]</code> section. In my case, I have two vJoy devices I'm playing
+with, so my config (without comments) will look like this:</li>
+</ul>
+<pre><code>[order]
+{5dfaa060-0f83-11ea-8003-444553540000}
+{a3c2c570-0f81-11ea-800a-444553540000}
+
+[visible]
+{5dfaa060-0f83-11ea-8003-444553540000}
+{a3c2c570-0f81-11ea-800a-444553540000}
+</code></pre><blockquote>
+<p><strong>Note:</strong> I'm also using the <code>[order]</code> section since I have two vJoy devices that I want the game to see. This way
+they will always show up to the game in the same order.</p>
+</blockquote>
+<p>To test that devreorder is working, launch Star Citizen and look at the console ouput (or <code>LIVE\Game.log</code>) and look for
+the line <code>Input initialization</code>. If things are working, you should only see your <code>visible</code> devices, like so:</p>
+<pre><code>&lt;2020-09-24T17:51:34.892Z&gt; Input initialization
+&lt;2020-09-24T17:51:35.223Z&gt; - Connected joystick0: vJoy Device {BEAD1234-0000-0000-0000-504944564944}
+&lt;2020-09-24T17:51:35.318Z&gt; - Connected joystick1: vJoy Device {BEAD1234-0000-0000-0000-504944564944}
+</code></pre><h2 id="install-joystick-gremlin">Install Joystick Gremlin</h2>
+<p>Simply download and install the latest MSI version from: <a href="https://whitemagic.github.io/JoystickGremlin/download/">https://whitemagic.github.io/JoystickGremlin/download/</a></p>
 <h1 id="verify-setup">Verify Setup</h1>
 <p>At this point, <strong>Joystick Gremlin</strong> should have a tab for each of your devices in
 its main window, as well as a <strong>Keyboard</strong>, <strong>vJoy Device #1</strong> and <strong>Settings</strong>
@@ -312,15 +302,8 @@ tabs.</p>
   <img src="https://cdn.discordapp.com/attachments/526695875011936279/534169767406469150/jg_verify.PNG"  class="left"  />
 
 
-<p>Launch the <strong>Set up USB Game Controllers</strong> tool from the Start menu, and you
-should see <strong>vJoy Device</strong>, and none of your joysticks you configured in
-<strong>HidGuardian</strong> tab in <strong>Joystick Gremlin</strong>.</p>
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534164342992797696/game_controllers.PNG"  class="left"  />
-
-
 <h1 id="configuration-guide">Configuration Guide</h1>
-<p>Now that the groundwork is all done. We'll continue the guide in <a href="https://ventorvar.com/posts/joystick-config/">part 2</a>.</p>
+<p>Now the groundwork is all done. We'll continue the guide in <a href="https://ventorvar.com/posts/joystick-config/">part 2</a>.</p>
 <blockquote>
 <p><strong>Need Help? Have an issue/comment?</strong> Feel free to join my Discord: <a href="https://discord.gg/CVBMxJq">https://discord.gg/CVBMxJq</a></p>
 </blockquote>
@@ -333,13 +316,6 @@ should see <strong>vJoy Device</strong>, and none of your joysticks you configur
           <hr />
         </div>
         <div class="pagination__buttons">
-          
-            <span class="button previous">
-              <a href="https://ventorvar.com/posts/joystick-sc-tldr/">
-                <span class="button__icon">←</span>
-                <span class="button__text">TL;DR - Advanced Joystick Configs for Star Citizen </span>
-              </a>
-            </span>
           
           
             <span class="button next">

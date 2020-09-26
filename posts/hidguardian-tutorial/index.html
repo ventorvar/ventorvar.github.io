@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>HidGuardian Setup Guide :: Ventorvar Gaming</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="If you&#39;re playing a game that doesn&#39;t work with devreorder, HidGuardian is another options to filter your inputs.
+Setting up HidGuardian  Note: If HidGuardian does not work well on your system, there is a work around for Star Citizen at least. SC will only see devices that are present when it is launched. Therefore, you can launch SC, then attach your devices. You&#39;ll still have to make sure they are loaded correctly in JG, however"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://ventorvar.com/posts/hidguardian-tutorial/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://ventorvar.com/assets/style.css">
+
+
+<link rel="stylesheet" href="https://ventorvar.com/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ventorvar.com/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ventorvar.com/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HidGuardian Setup Guide"/>
+<meta name="twitter:description" content="Installing and using the HidGuardian Windows Joystick filter.
+"/>
+
+
+
+<meta property="og:title" content="HidGuardian Setup Guide" />
+<meta property="og:description" content="Installing and using the HidGuardian Windows Joystick filter.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ventorvar.com/posts/hidguardian-tutorial/" />
+<meta property="article:published_time" content="2020-09-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-24T00:00:00+00:00" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="https://ventorvar.com/galleria/galleria.min.js"></script>
+
+<script src="https://ventorvar.com/galleria/themes/twelve/galleria.twelve.min.js"></script>
+<script src="https://ventorvar.com/galleria/plugins/history/galleria.history.min.js"></script>
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://ventorvar.com/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">ventorvar gaming</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="../../about">About</a></li>
+        
+      
+        
+          <li><a href="../../gallery">Gallery</a></li>
+        
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="../../about">About</a></li>
+      
+    
+      
+        <li><a href="../../gallery">Gallery</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="https://ventorvar.com/posts/hidguardian-tutorial/">HidGuardian Setup Guide</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2020-09-24
+        </span>
+      
+      <span class="post-author">— Written by ventorvar</span>
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://ventorvar.com/tags/hotas/">HOTAS</a>&nbsp;
+        
+          #<a href="https://ventorvar.com/tags/hosas/">HOSAS</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>If you're playing a game that doesn't work with devreorder, HidGuardian is
+another options to filter your inputs.</p>
+<h2 id="setting-up-hidguardian">Setting up HidGuardian</h2>
+<blockquote>
+<p><strong>Note:</strong> If HidGuardian does not work well on your system, there is a
+work around for Star Citizen at least. SC will only see devices that are
+present when it is launched. Therefore, you can launch SC, then attach your
+devices. You'll still have to make sure they are loaded correctly in JG,
+however</p>
+</blockquote>
+<p>The <em>easiest</em> way to install <strong>HidGuardian</strong> is to use <a href="https://www.autohotkey.com/boards/viewtopic.php?t=34890">WhiteKnight</a>
+utility. You don't need to follow the directions, just download the tool and follow these:</p>
+<ul>
+<li>Extract <strong>WhiteKnight</strong></li>
+<li>Run <strong>AutoWhitelister.exe</strong></li>
+<li>Click <strong>Install</strong> next to <strong>HidGuardian Install state:  Not Installed</strong></li>
+<li>Close <strong>WhiteKnight</strong></li>
+</ul>
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534163838862491658/whiteknight_install.png"  class="left"  />
+
+
+<blockquote>
+<p><strong>Note:</strong>
+If you'd rather install this manually, you can follow the instructions on vigem's forums
+<a href="https://forums.vigem.org/topic/271/hidguardian-v1-driver-installation">here</a></p>
+</blockquote>
+<h2 id="joystick-gremlin-setup">Joystick Gremlin Setup</h2>
+<ul>
+<li><a href="https://whitemagic.github.io/JoystickGremlin/download/">https://whitemagic.github.io/JoystickGremlin/download/</a></li>
+<li>Launch <strong>Joystick Gremlin</strong> in admin mode</li>
+<li>Under the <strong>Tools</strong> menu, click <strong>Options</strong>
+<ul>
+<li>Select the <strong>HidGuardian</strong> Tab
+<ul>
+<li>Check boxes for each device type you want to use. For my setup, I have a
+box for <strong>T.16000M</strong> and a box for <strong>TWCS Throttle</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Unplug all of your devices</li>
+<li>Plug your devices back in</li>
+</ul>
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534164216224022542/jg_hidguardian.PNG"  class="left"  />
+
+
+<p>Because we're using <strong>HidGuardian</strong>, <strong>Joystick Gremlin</strong> must always be run as an
+administrator. To make this easier, we can modify the shortcut so that it will
+always start that way.</p>
+<ul>
+<li>Open Start and find <strong>Joystick Gremlin</strong></li>
+<li>Right-click the shortcut and select <strong>Properties</strong></li>
+<li>Select the <strong>Compatibility</strong> tab</li>
+<li>Check the box for <strong>Run this program as an administrator</strong></li>
+<li>Click <strong>Apply</strong> and <strong>OK</strong></li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> If you ever run <strong>Joystick Gremlin</strong> and down see your joysticks,
+double check that you're running it as an administrator.</p>
+</blockquote>
+<h1 id="verify-setup">Verify Setup</h1>
+<p>At this point, <strong>Joystick Gremlin</strong> should have a tab for each of your devices in
+its main window, as well as a <strong>Keyboard</strong>, <strong>vJoy Device #1</strong> and <strong>Settings</strong>
+tabs.</p>
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534169767406469150/jg_verify.PNG"  class="left"  />
+
+
+<p>Launch the <strong>Set up USB Game Controllers</strong> tool from the Start menu, and you
+should see <strong>vJoy Device</strong>, and none of your joysticks you configured in
+<strong>HidGuardian</strong> tab in <strong>Joystick Gremlin</strong>.</p>
+
+  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534164342992797696/game_controllers.PNG"  class="left"  />
+
+
+<blockquote>
+<p><strong>Need Help? Have an issue/comment?</strong> Feel free to join my Discord: <a href="https://discord.gg/CVBMxJq">https://discord.gg/CVBMxJq</a></p>
+</blockquote>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://ventorvar.com/posts/joystick-config/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Intro to Advanced Joystick Configs - Part 2</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="https://ventorvar.com/posts/gladiator-k/">
+                <span class="button__text">The Gladiator K from VKB</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ventorvar" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user"> </div>
+    
+  </div>
+</footer>
+
+<script src="https://ventorvar.com/assets/main.js"></script>
+<script src="https://ventorvar.com/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>

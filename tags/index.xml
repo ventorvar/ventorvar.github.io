@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
-    <lastBuildDate>Sat, 07 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ventorvar.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>HOSAS</title>
       <link>https://ventorvar.com/tags/hosas/</link>
-      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/tags/hosas/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>HOTAS</title>
       <link>https://ventorvar.com/tags/hotas/</link>
-      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/tags/hotas/</guid>
       <description></description>
@@ -33,7 +33,7 @@
     <item>
       <title>Joystick Gremlin</title>
       <link>https://ventorvar.com/tags/joystick-gremlin/</link>
-      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/tags/joystick-gremlin/</guid>
       <description></description>
@@ -42,9 +42,36 @@
     <item>
       <title>Star Citizen</title>
       <link>https://ventorvar.com/tags/star-citizen/</link>
-      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/tags/star-citizen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gladiator</title>
+      <link>https://ventorvar.com/tags/gladiator/</link>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ventorvar.com/tags/gladiator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kosmosima</title>
+      <link>https://ventorvar.com/tags/kosmosima/</link>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ventorvar.com/tags/kosmosima/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VKB</title>
+      <link>https://ventorvar.com/tags/vkb/</link>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ventorvar.com/tags/vkb/</guid>
       <description></description>
     </item>
     
