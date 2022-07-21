@@ -2,15 +2,17 @@
 <html lang="en">
   <head>
     
-      <title>HidGuardian Setup Guide :: Ventorvar Gaming</title>
+      <title>devreorder Setup Guide :: Ventorvar Gaming</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="If you&amp;rsquo;re playing a game that doesn&amp;rsquo;t work with devreorder, HidGuardian is another options to filter your inputs.
-Setting up HidGuardian Note: If HidGuardian does not work well on your system, there is a work around for Star Citizen at least. SC will only see devices that are present when it is launched. Therefore, you can launch SC, then attach your devices. You&amp;rsquo;ll still have to make sure they are loaded correctly in JG, however"/>
+<meta name="description" content="Note: This was a previous method for controlling how games see your input devices. This is no longer used in the primary guide but is kept here for reference.
+dinput8 DLL wrapper called devreorder
+Setting up devreorder Note: If devreorder doesn&amp;rsquo;t work with your game, HidGuardian is another option to hide inputs from your game
+Download the latest release here (the zip file) Unzip x64/dinput8.dll to your Star Citizen LIVE\Bin64 folder next to StarCitizen."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="https://ventorvar.com/posts/hidguardian-tutorial/" />
+<link rel="canonical" href="https://ventorvar.com/posts/devreorder-tutorial/" />
 
 
 
@@ -27,19 +29,19 @@ Setting up HidGuardian Note: If HidGuardian does not work well on your system, t
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="HidGuardian Setup Guide"/>
+<meta name="twitter:title" content="devreorder Setup Guide"/>
 <meta name="twitter:description" content="Installing and using the HidGuardian Windows Joystick filter.
 "/>
 
 
 
-<meta property="og:title" content="HidGuardian Setup Guide" />
+<meta property="og:title" content="devreorder Setup Guide" />
 <meta property="og:description" content="Installing and using the HidGuardian Windows Joystick filter.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ventorvar.com/posts/hidguardian-tutorial/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-09-24T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-24T00:00:00+00:00" />
+<meta property="og:url" content="https://ventorvar.com/posts/devreorder-tutorial/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-25T00:00:00+00:00" />
 
 
 
@@ -119,11 +121,11 @@ Setting up HidGuardian Note: If HidGuardian does not work well on your system, t
       <div class="content">
         
   <div class="post">
-    <h2 class="post-title"><a href="https://ventorvar.com/posts/hidguardian-tutorial/">HidGuardian Setup Guide</a></h2>
+    <h2 class="post-title"><a href="https://ventorvar.com/posts/devreorder-tutorial/">devreorder Setup Guide</a></h2>
     <div class="post-meta">
       
         <span class="post-date">
-            2020-09-24
+            2020-09-25
         </span>
       
       <span class="post-author">— Written by ventorvar</span>
@@ -143,69 +145,51 @@ Setting up HidGuardian Note: If HidGuardian does not work well on your system, t
     
 
     <div class="post-content">
-      <p>If you&rsquo;re playing a game that doesn&rsquo;t work with devreorder, HidGuardian is
-another options to filter your inputs.</p>
-<h2 id="setting-up-hidguardian">Setting up HidGuardian</h2>
-<blockquote>
-<p><strong>Note:</strong> If HidGuardian does not work well on your system, there is a
-work around for Star Citizen at least. SC will only see devices that are
-present when it is launched. Therefore, you can launch SC, then attach your
-devices. You&rsquo;ll still have to make sure they are loaded correctly in JG,
-however</p>
+      <blockquote>
+<p>Note: This was a previous method for controlling how games see your input devices. This is no longer used in the
+primary guide but is kept here for reference.</p>
 </blockquote>
-<p>The <em>easiest</em> way to install <strong>HidGuardian</strong> is to use <a href="https://www.autohotkey.com/boards/viewtopic.php?t=34890">WhiteKnight</a>
-utility. You don&rsquo;t need to follow the directions, just download the tool and follow these:</p>
-<ul>
-<li>Extract <strong>WhiteKnight</strong></li>
-<li>Run <strong>AutoWhitelister.exe</strong></li>
-<li>Click <strong>Install</strong> next to <strong>HidGuardian Install state:  Not Installed</strong></li>
-<li>Close <strong>WhiteKnight</strong></li>
-</ul>
-
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534163838862491658/whiteknight_install.png"  class="left"  />
-
-
+<p>dinput8 DLL wrapper called <a href="https://github.com/briankendall/devreorder">devreorder</a></p>
+<h2 id="setting-up-devreorder">Setting up devreorder</h2>
 <blockquote>
-<p><strong>Note:</strong>
-If you&rsquo;d rather install this manually, you can follow the instructions on vigem&rsquo;s forums
-<a href="https://forums.vigem.org/topic/271/hidguardian-v1-driver-installation">here</a></p>
+<p><strong>Note:</strong> If devreorder doesn&rsquo;t work with your game, <a href="https://ventorvar.com/posts/hidguardian-tutorial/">HidGuardian</a> is
+another option to hide inputs from your game</p>
 </blockquote>
-<h2 id="joystick-gremlin-setup">Joystick Gremlin Setup</h2>
 <ul>
-<li><a href="https://whitemagic.github.io/JoystickGremlin/download/">https://whitemagic.github.io/JoystickGremlin/download/</a></li>
-<li>Launch <strong>Joystick Gremlin</strong> in admin mode</li>
-<li>Under the <strong>Tools</strong> menu, click <strong>Options</strong>
-<ul>
-<li>Select the <strong>HidGuardian</strong> Tab
-<ul>
-<li>Check boxes for each device type you want to use. For my setup, I have a
-box for <strong>T.16000M</strong> and a box for <strong>TWCS Throttle</strong></li>
+<li>Download the latest release <a href="https://github.com/briankendall/devreorder/releases">here</a> (the zip file)</li>
+<li>Unzip <code>x64/dinput8.dll</code> to your Star Citizen <code>LIVE\Bin64</code> folder next to <code>StarCitizen.exe</code></li>
+<li>Unzip <code>devreorder.ini</code> to your Star Citzen <code>LIVE</code> folder (where <code>Data.p4k</code> is)</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>Unplug all of your devices</li>
-<li>Plug your devices back in</li>
+<h3 id="configure-devreorder">Configure devreorder</h3>
+<ul>
+<li>Use the <code>DeviceLister</code> tool in the <code>devreorder</code> release zip to list active joystick devices.</li>
 </ul>
 
-  <img src="https://cdn.discordapp.com/attachments/526695875011936279/534164216224022542/jg_hidguardian.PNG"  class="left"  />
+  <img src="https://cdn.discordapp.com/attachments/652921814321725454/759469426235015188/unknown.png"  class="left"  />
 
 
-<p>Because we&rsquo;re using <strong>HidGuardian</strong>, <strong>Joystick Gremlin</strong> must always be run as an
-administrator. To make this easier, we can modify the shortcut so that it will
-always start that way.</p>
 <ul>
-<li>Open Start and find <strong>Joystick Gremlin</strong></li>
-<li>Right-click the shortcut and select <strong>Properties</strong></li>
-<li>Select the <strong>Compatibility</strong> tab</li>
-<li>Check the box for <strong>Run this program as an administrator</strong></li>
-<li>Click <strong>Apply</strong> and <strong>OK</strong></li>
+<li>Edit <code>devreorder.ini</code> in our SC <code>LIVE</code> folder, and copy the <code>vJoy Device</code> GUID (including the brackets, e.g.
+<code>{a3c2c570-0f81-11ea-800a-444553540000}</code>) to the <code>[visible]</code> section. In my case, I have two vJoy devices I&rsquo;m playing
+with, so my config (without comments) will look like this:</li>
 </ul>
-<blockquote>
-<p><strong>Note:</strong> If you ever run <strong>Joystick Gremlin</strong> and down see your joysticks,
-double check that you&rsquo;re running it as an administrator.</p>
+<pre tabindex="0"><code>[order]
+{5dfaa060-0f83-11ea-8003-444553540000}
+{a3c2c570-0f81-11ea-800a-444553540000}
+
+[visible]
+{5dfaa060-0f83-11ea-8003-444553540000}
+{a3c2c570-0f81-11ea-800a-444553540000}
+</code></pre><blockquote>
+<p><strong>Note:</strong> I&rsquo;m also using the <code>[order]</code> section since I have two vJoy devices that I want the game to see. This way
+they will always show up to the game in the same order.</p>
 </blockquote>
-<h1 id="verify-setup">Verify Setup</h1>
+<p>To test that devreorder is working, launch Star Citizen and look at the console ouput (or <code>LIVE\Game.log</code>) and look for
+the line <code>Input initialization</code>. If things are working, you should only see your <code>visible</code> devices, like so:</p>
+<pre tabindex="0"><code>&lt;2020-09-24T17:51:34.892Z&gt; Input initialization
+&lt;2020-09-24T17:51:35.223Z&gt; - Connected joystick0: vJoy Device {BEAD1234-0000-0000-0000-504944564944}
+&lt;2020-09-24T17:51:35.318Z&gt; - Connected joystick1: vJoy Device {BEAD1234-0000-0000-0000-504944564944}
+</code></pre><h1 id="verify-setup">Verify Setup</h1>
 <p>At this point, <strong>Joystick Gremlin</strong> should have a tab for each of your devices in
 its main window, as well as a <strong>Keyboard</strong>, <strong>vJoy Device #1</strong> and <strong>Settings</strong>
 tabs.</p>
@@ -234,16 +218,16 @@ should see <strong>vJoy Device</strong>, and none of your joysticks you configur
         <div class="pagination__buttons">
           
             <span class="button previous">
-              <a href="https://ventorvar.com/posts/joystick-config/">
+              <a href="https://ventorvar.com/posts/joystick-intro/">
                 <span class="button__icon">←</span>
-                <span class="button__text">Intro to Advanced Joystick Configs - Part 2</span>
+                <span class="button__text">Intro to Advanced Joystick Configs - Part 1</span>
               </a>
             </span>
           
           
             <span class="button next">
-              <a href="https://ventorvar.com/posts/gladiator-k/">
-                <span class="button__text">The Gladiator K from VKB</span>
+              <a href="https://ventorvar.com/posts/joystick-config/">
+                <span class="button__text">Intro to Advanced Joystick Configs - Part 2</span>
                 <span class="button__icon">→</span>
               </a>
             </span>

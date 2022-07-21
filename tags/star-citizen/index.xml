@@ -7,20 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
-    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ventorvar.com/tags/star-citizen/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 21 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ventorvar.com/tags/star-citizen/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intro to Advanced Joystick Configs - Part 1</title>
       <link>https://ventorvar.com/posts/joystick-intro/</link>
-      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/posts/joystick-intro/</guid>
       <description>Just need the configs? For SC head to TL;DR
-  A note on the update: If you followed the previous version of this guide, you no longer need HidGuardian! Also Joystick Gremlin no longer needs to run as an administrator.
- The Problem We&#39;re Trying to Solve Using multiple joysticks on Windows can be a huge pain. There is no guarantee of the input device order when your machine reboots or when they&#39;re plugged, even if you follow the same order every time.</description>
+A note on the update: If you followed the previous version of this guide, you no longer need HidGuardian! Also Joystick Gremlin no longer needs to run as an administrator.
+The Problem We&amp;rsquo;re Trying to Solve Using multiple joysticks on Windows can be a huge pain. There is no guarantee of the input device order when your machine reboots or when they&amp;rsquo;re plugged, even if you follow the same order every time.</description>
     </item>
     
     <item>
@@ -29,9 +25,9 @@
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ventorvar.com/posts/joystick-config/</guid>
-      <description>Note: This is part 2 of a series. If you haven&#39;t already installed all the required tools, go check out part 1 first.
-  Just need the configs? go the to TL;DR
- Getting familiar with Joystick Gremlin The keystone to our entire setup is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard.</description>
+      <description>Note: This is part 2 of a series. If you haven&amp;rsquo;t already installed all the required tools, go check out part 1 first.
+Just need the configs? go to the TL;DR
+Getting familiar with Joystick Gremlin The keystone to our entire setup is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard.</description>
     </item>
     
     <item>
@@ -50,7 +46,7 @@
       
       <guid>https://ventorvar.com/posts/joystick-sc-tldr/</guid>
       <description>Star Citizen Advanced Controls Configuration These configurations are based off my personal setup for Star Citizen and are outlined in a two part guide on this site. That being said there are a few requirements, and you can use my configurations as a starting point whether or not you have the same joystick setup.
- Note: This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may not work with the current build</description>
+Note: This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may not work with the current build</description>
     </item>
     
   </channel>
