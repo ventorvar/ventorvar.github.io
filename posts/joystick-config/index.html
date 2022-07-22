@@ -39,8 +39,8 @@ Getting familiar with Joystick Gremlin The keystone to our entire setup is Joyst
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ventorvar.com/posts/joystick-config/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-09-25T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-25T00:00:00+00:00" />
+<meta property="article:published_time" content="2022-07-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-21T00:00:00+00:00" />
 
 
 
@@ -124,7 +124,7 @@ Getting familiar with Joystick Gremlin The keystone to our entire setup is Joyst
     <div class="post-meta">
       
         <span class="post-date">
-            2020-09-25
+            2022-07-21
         </span>
       
       <span class="post-author">— Written by ventorvar</span>
@@ -183,16 +183,17 @@ emit keyboard commands for the default key bindings rather than configure
 joystick buttons within the game.</p>
 <h2 id="planning-it-out">Planning it out</h2>
 <p>Before we start configuring JG and Star Citizen, it&rsquo;s good to come up with a
-plan. One of the easiest ways I&rsquo;ve found is to use Drawings in Google Docs.</p>
+plan. One of the easiest ways I&rsquo;ve found is to use Diagrams.net</p>
 
-  <img src="https://cdn.discordapp.com/attachments/652921814321725454/652995104109494274/joystick_drawing.jpg"  class="left"  />
+  <img src="https://cdn.discordapp.com/attachments/652921814321725454/999782115350679684/unknown.png"  class="left"  />
 
 
-<p>You can copy mine from <a href="https://docs.google.com/drawings/d/14IJUqXRCJyYPlzwZPWcJVJUpznWHdLOK20iptyyzc4g/">here</a>.
-I label the physical input with the in-game action on top, and the keyboard or joystick input on
+<p>You can copy mine from <a href="https://drive.google.com/file/d/1UM4qPccTYAkluSx1fLwBGfNH6mXuxYqS/view?usp=sharing">here</a>, and
+edit it with <a href="https://app.diagrams.net">Diagrams.net</a>.
+I label the physical input with the in-game action on top, and the keyboard or joystick output on
 the bottom. As you can see, most of my inputs map to keyboard commands, with only a few joystick buttons
-(J1, J2, J3, etc). It&rsquo;s also useful to have a the <a href="https://cdn.discordapp.com/attachments/652921814321725454/652922995341393950/SC3_7_2_KeyMappings_v1.pdf">in-game keyboard map</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
-handy when creating this.</p>
+(J1, J2, J3, etc). It&rsquo;s also useful to have the <a href="https://docs.google.com/spreadsheets/d/15UHroq8xVSAH-AcX9hXS_D6w74RYP2TQQAsZTPlbSO0/edit?usp=sharing">action map</a>
+handy when creating your configuration.</p>
 <h1 id="joystick-gremlin-configuration">Joystick Gremlin Configuration</h1>
 <h2 id="identifying-devices">Identifying Devices</h2>
 <p>First, we&rsquo;re going to configure the two joysticks. There is a small controller
@@ -213,7 +214,7 @@ tabs as a reminder.</p>
 <h2 id="mapping-axes">Mapping Axes</h2>
 <p>One of the more complex mappings are the axes. We&rsquo;ll be mapping the roll, pitch
 and yaw axes from our left and right joysticks onto a single vJoy device. We&rsquo;ll
-be using this standardized frame reference<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+be using this standardized frame reference<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p><a href="https://en.wikipedia.org/wiki/Axes_conventions#/media/File:RPY_angles_of_spaceships_(local_frame).png">
   <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/RPY_angles_of_spaceships_%28local_frame%29.png"  class="left"  />
 
@@ -241,10 +242,18 @@ mapping:</p>
 <li>Up/Down -&gt; <strong>vJoy Device 1</strong>, <strong>Axis Z Rotation</strong></li>
 </ul>
 <h3 id="testing-it-out">Testing it out</h3>
-<p>To test our configuration, open the <strong>Monitor vJoy</strong> application. Ensure to
-<strong>activate</strong> JG by clicking the <strong>activate</strong> button which turns it green. Now
-when you move your left and right joysticks, you should see the corresponding
+<p>To test our configuration, open the <strong>Monitor vJoy</strong> application. Ensure to <strong>activate</strong> JG by clicking the <strong>activate</strong>
+button which turns it green. You should also see <code>Status: Running and Active</code> in the bottom left of the JG window.</p>
+
+  <img src="https://cdn.discordapp.com/attachments/652921814321725454/999784916776669214/unknown.png"  class="left"  />
+
+
+<p>Now when you move your left and right joysticks, you should see the corresponding
 axis move in the vJoy monitor.</p>
+
+  <img src="https://cdn.discordapp.com/attachments/652921814321725454/999785235761877032/unknown.png"  class="left"  />
+
+
 <h3 id="inverting-axes">Inverting axes</h3>
 <p>If we loaded this up right now and tried it out in Star Citizen we&rsquo;d find that
 the strafe Forward/Back and Up/Down would be reversed. Rather than fixing this
@@ -294,20 +303,17 @@ tab is selected</li>
 <p>If we&rsquo;re mapping a physical input to a keyboard command, then we use the <strong>map
 to keyboard</strong> action.</p>
 <ul>
-<li>Find the <strong>Gimbal Lock</strong> button on the left joystick by physically pressing
+<li>Find the <strong>Gimbal Mode</strong> button on the left joystick by physically pressing
 the bottom right-most button on the right side buttong group while the <strong>Left</strong> joystick tab is selected (Button 10)</li>
 <li>Select the <strong>Map to Keyboard</strong> action and click <strong>Add</strong></li>
 <li>Press the <strong>Record keys</strong> button in the <strong>Map to Keyboard</strong> form</li>
-<li>Press <strong>Left Alt + R</strong> on your keyboard and release</li>
+<li>Press <strong>G</strong> on your keyboard and release</li>
 </ul>
 
   <img src="https://cdn.discordapp.com/attachments/526695875011936279/534246929622892555/jg_gimbal_lock.PNG"  class="left"  />
 
 
-<p>Continue this process for every physical button you&rsquo;d like to configure. For
-Star Citizen (3.4), you can use <a href="https://imgur.com/a/v4eofhx">this</a> as a good
-reference. However, key bindings change frequently and I&rsquo;d advise you try to
-find a current version of the advanced key bindings.</p>
+<p>Continue this process for every physical button you&rsquo;d like to configure.</p>
 <h1 id="configuring-star-citizen">Configuring Star Citizen</h1>
 <p>At this point, you should have every physical button that you want to configure
 either <strong>remap</strong>&rsquo;d to the vJoy device, or to a keyboard press. Now we&rsquo;ll go into
@@ -331,7 +337,7 @@ Movement</strong> and clear <strong>Pitch</strong> and <strong>Yaw</strong> by s
 <p>Now all of the keyboard mappings we&rsquo;ve created in JG should match up to their
 in-game equivalents.</p>
 <h2 id="configuring-joystick-inputs">Configuring Joystick Inputs</h2>
-<p>Still in the <strong>ADVANCED CONTROLS CUSTOMIZATION</strong> UI, use the right arrow in the
+<p>In <strong>Options &gt; KEYBINDINGS &gt; ADVANCED CONTROLS CUSTOMIZATION</strong> menu, use the right arrow in the
 bottom right button that currently says <strong>Keyboard / Mouse</strong> to select
 <strong>Joystick / HOTAS</strong>. None of the built-in control profiles match our purpose,
 so we&rsquo;re going to completely clear the joystick configuration, and configure
@@ -343,6 +349,10 @@ button.</p>
 <li>Scroll down and choose <strong>Clear All Device Bindings</strong></li>
 <li>For each <strong>Joystick</strong> listed on the left side, choose the button next to it that says <strong>None</strong> and change it to <strong>JoyStick</strong></li>
 </ul>
+<blockquote>
+<p><strong>Note:</strong> Sometimes the clear all device bindings profile doesn&rsquo;t actually clear everything. Make sure to go through
+each category and ensure that all device bindings are cleared, or set to your liking.</p>
+</blockquote>
 <p>Now that the controls are cleared, we must assign certain bindings using the following table. Do this by clicking on
 the item twice, then moving the joystick in the desired axis, or pressing the intended button. Use your joystick
 configuration map for a reference.</p>
@@ -359,7 +369,22 @@ configuration map for a reference.</p>
 </thead>
 <tbody>
 <tr>
-<td>Flight - View</td>
+<td>Vehicles - Seats and operator Modes</td>
+<td>Look Behind</td>
+<td>Button 19</td>
+</tr>
+<tr>
+<td>Vehicles - Cockpit</td>
+<td>Open All Doors</td>
+<td>Button 27</td>
+</tr>
+<tr>
+<td></td>
+<td>Close All Doors</td>
+<td>Button 29</td>
+</tr>
+<tr>
+<td>Vehicles - View</td>
 <td>Look left / right</td>
 <td>Z-Axis</td>
 </tr>
@@ -367,11 +392,6 @@ configuration map for a reference.</p>
 <td></td>
 <td>Look up / down</td>
 <td>Y-Axis</td>
-</tr>
-<tr>
-<td></td>
-<td>Look Behind</td>
-<td>Button 19</td>
 </tr>
 <tr>
 <td>Flight - Movement</td>
@@ -390,16 +410,6 @@ configuration map for a reference.</p>
 </tr>
 <tr>
 <td></td>
-<td>Speed Limiter (Abs.)</td>
-<td>Slider 1</td>
-</tr>
-<tr>
-<td></td>
-<td>Acceleration Limiter (Abs.)</td>
-<td>Slider 2 (Dial)</td>
-</tr>
-<tr>
-<td></td>
 <td>Strafe up / down</td>
 <td>Z-Axis Rotation</td>
 </tr>
@@ -415,36 +425,21 @@ configuration map for a reference.</p>
 </tr>
 <tr>
 <td></td>
+<td>Speed Limiter (Abs.)</td>
+<td>Slider 1</td>
+</tr>
+<tr>
+<td></td>
+<td>Acceleration Limiter Up / Down (Abs.)</td>
+<td>Slider 2 (Dial)</td>
+</tr>
+<tr>
+<td></td>
 <td>G-force safety (Toggle)</td>
 <td>Button 30</td>
 </tr>
 <tr>
-<td>Flight - Targeting</td>
-<td>Aim left / right</td>
-<td>X-Axis</td>
-</tr>
-<tr>
-<td></td>
-<td>Aim up / down</td>
-<td>Y-Axis</td>
-</tr>
-<tr>
-<td></td>
-<td>Scanning Radar Ping</td>
-<td>Button 1</td>
-</tr>
-<tr>
-<td></td>
-<td>Scanning Increase Radar Angle</td>
-<td>Button 3</td>
-</tr>
-<tr>
-<td></td>
-<td>Scanning Decrease Radar Angle</td>
-<td>Button 2</td>
-</tr>
-<tr>
-<td>Mining</td>
+<td>Vehicles - Mining</td>
 <td>Fire Mining Laster (Toggle)</td>
 <td>Button 1</td>
 </tr>
@@ -456,20 +451,20 @@ configuration map for a reference.</p>
 <tr>
 <td></td>
 <td>Increase / Decrease Mining Laser Power</td>
-<td>Slider 2</td>
+<td>Slider 2 (Dial)</td>
 </tr>
 <tr>
-<td>Flight - Turrets</td>
-<td>Aim left / right</td>
-<td>X-Axis</td>
-</tr>
-<tr>
-<td></td>
-<td>Aim up / down</td>
+<td>Turret - Movement</td>
+<td>Pitch</td>
 <td>Y-Axis</td>
 </tr>
 <tr>
-<td>Flight - Weapons</td>
+<td></td>
+<td>Yaw</td>
+<td>X-Axis</td>
+</tr>
+<tr>
+<td>Vehicle - Weapons</td>
 <td>Fire Weapon Group 1</td>
 <td>Button 1</td>
 </tr>
@@ -479,14 +474,14 @@ configuration map for a reference.</p>
 <td>Button 3</td>
 </tr>
 <tr>
-<td></td>
-<td>Acquire missile lock</td>
-<td>Button 2</td>
+<td>Vehicle - Missiles</td>
+<td>Launch Missiles (Tap)</td>
+<td>Button 1</td>
 </tr>
 <tr>
 <td></td>
-<td>Launch missile</td>
-<td>Button 2</td>
+<td>Cycle Next Missile Type</td>
+<td>Button 3</td>
 </tr>
 <tr>
 <td>Ground Vehicle - General</td>
@@ -514,9 +509,19 @@ configuration map for a reference.</p>
 <td>Button 3</td>
 </tr>
 <tr>
+<td></td>
+<td>Open All Doors</td>
+<td>Button 27</td>
+</tr>
+<tr>
+<td></td>
+<td>Close All Doors</td>
+<td>Button 29</td>
+</tr>
+<tr>
 <td>Ground Vehicle - Movement</td>
 <td>Drive Forward / Backward</td>
-<td>Y-Axis</td>
+<td>X-Axis Rotation</td>
 </tr>
 <tr>
 <td></td>
@@ -525,23 +530,8 @@ configuration map for a reference.</p>
 </tr>
 <tr>
 <td></td>
-<td>Primary Fire</td>
-<td>Button 1</td>
-</tr>
-<tr>
-<td></td>
-<td>Secondary Fire</td>
-<td>Button 3</td>
-</tr>
-<tr>
-<td>Ground Vehicle - Gunner</td>
-<td>Primary Fire</td>
-<td>Button 1</td>
-</tr>
-<tr>
-<td></td>
-<td>Secondary Fire</td>
-<td>Button 3</td>
+<td>Pitch Up /Down</td>
+<td>Y-Axis</td>
 </tr>
 <tr>
 <td>Social - General</td>
@@ -560,15 +550,15 @@ CONTROLS CUSTOMIZATION</strong></li>
 <li>Click &lsquo;Save Control Settings&rsquo;</li>
 <li>Enter a name for your control setup, and click <strong>Save</strong></li>
 <li>Copy the control settings profile from the
-<code>RSI\StarCitizen\LIVE\USER\Controls\Mappings</code> folder.</li>
+<code>RSI\StarCitizen\LIVE\USER\Client\0\Controls\Mappings</code> folder.</li>
 </ul>
 <p>Whenever you need to delete your <strong>USER</strong> folder, simply copy the
-<strong>layout_*_exported.yml</strong> back into the <code>USER\Controls\Mappings</code> folder and
+<strong>layout_*_exported.yml</strong> back into the <code>USER\Client\0\Controls\Mappings</code> folder and
 use the <strong>CONTROL PROFILES</strong> button in Star Citizen like you did to load the
 advanced keyboard controls above.</p>
 <h1 id="next-steps">Next Steps</h1>
 <h2 id="advanced-axis-curves">Advanced Axis Curves</h2>
-<p>In my configuration, I use a custome response curve for the <strong>Speed Limiter</strong> axis (Z-Axis on the Throttle
+<p>In my configuration, I use a custom response curve for the <strong>Speed Limiter</strong> axis (Z-Axis on the Throttle
 mapped to Slider) so that I can have more precise control over the lower 1/8th of the limiter region. This is done the
 same way we inverted the axes above, except we configure it at as <strong>Cubic Bezier Spline</strong> curve and use the control
 points to adjust the response curve to our liking. This is very much personal preference, but you can see what I&rsquo;ve
@@ -589,10 +579,7 @@ precision mode for dogfighting that will give us better accuracy while firing we
 <hr>
 <ol>
 <li id="fn:1">
-<p><a href="https://www.reddit.com/r/starcitizen/comments/e0zrde/sc_372_keyboard_mouse_gamepad_and_joystick/">https://www.reddit.com/r/starcitizen/comments/e0zrde/sc_372_keyboard_mouse_gamepad_and_joystick/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p><a href="https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation">https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation">https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -607,16 +594,16 @@ precision mode for dogfighting that will give us better accuracy while firing we
         <div class="pagination__buttons">
           
             <span class="button previous">
-              <a href="https://ventorvar.com/posts/devreorder-tutorial/">
+              <a href="https://ventorvar.com/posts/joystick-intro/">
                 <span class="button__icon">←</span>
-                <span class="button__text">devreorder Setup Guide</span>
+                <span class="button__text">Intro to Advanced Joystick Configs - Part 1</span>
               </a>
             </span>
           
           
             <span class="button next">
-              <a href="https://ventorvar.com/posts/hidguardian-tutorial/">
-                <span class="button__text">HidGuardian Setup Guide</span>
+              <a href="https://ventorvar.com/posts/joystick-sc-tldr/">
+                <span class="button__text">TL;DR - Advanced Joystick Configs for Star Citizen </span>
                 <span class="button__icon">→</span>
               </a>
             </span>

@@ -7,7 +7,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="Star Citizen Advanced Controls Configuration These configurations are based off my personal setup for Star Citizen and are outlined in a two part guide on this site. That being said there are a few requirements, and you can use my configurations as a starting point whether or not you have the same joystick setup.
-Note: This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may not work with the current build"/>
+Note: This was last updated for Star Citizen 3.17.2-PTU.8143480 and may or may not work with the current build"/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://ventorvar.com/posts/joystick-sc-tldr/" />
@@ -38,8 +38,8 @@ Note: This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may n
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ventorvar.com/posts/joystick-sc-tldr/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-12-07T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-12-07T00:00:00+00:00" />
+<meta property="article:published_time" content="2022-07-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-21T00:00:00+00:00" />
 
 
 
@@ -123,7 +123,7 @@ Note: This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may n
     <div class="post-meta">
       
         <span class="post-date">
-            2019-12-07
+            2022-07-21
         </span>
       
       <span class="post-author">— Written by ventorvar</span>
@@ -156,11 +156,11 @@ Note: This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may n
 two part guide on this site. That being said there are a few requirements, and you can use my
 configurations as a starting point whether or not you have the same joystick setup.</p>
 <blockquote>
-<p><strong>Note:</strong> This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may not work with the current build</p>
+<p><strong>Note:</strong> This was last updated for Star Citizen 3.17.2-PTU.8143480 and may or may not work with the current build</p>
 </blockquote>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li>vJoy, Joystick Gremlin and HIDGuardian must be installed and setup correctly. Check out
+<li>vJoy, Joystick Gremlin and HidHide must be installed and setup correctly. Check out
 <a href="https://ventorvar.com/posts/joystick-intro/">part 1</a> of the full guide for information</li>
 <li>Understanding of how Joystick Gremlin works and how to use the advanced controls configurations in Star Citizen,
 otherwise I&rsquo;d recommend just following the <a href="https://ventorvar.com/posts/joystick-config/">second part</a> to really become
@@ -168,18 +168,27 @@ familiar</li>
 </ul>
 <h1 id="configurations">Configurations</h1>
 <ul>
-<li><strong>Google Drawing of key layout:</strong> <a href="https://docs.google.com/drawings/d/14IJUqXRCJyYPlzwZPWcJVJUpznWHdLOK20iptyyzc4g/">here</a></li>
-<li><strong>SC Control Mapping w/o GameGlass:</strong> <a href="https://cdn.discordapp.com/attachments/652921814321725454/652990605139640320/layout_Ventorvar_HOSASAT_37_exported.xml">layout_Ventorvar_HOSASAT_37_exported.xml</a></li>
-<li><strong>SC Control Mapping with GameGlass:</strong> <a href="https://cdn.discordapp.com/attachments/652921814321725454/652990607085797386/layout_Ventorvar_HOSASAT_37_GG_exported.xml">layout_Ventorvar_HOSASAT_37_GG_exported.xml</a></li>
-<li><strong>Joystick Gremlin Profile:</strong> <a href="https://cdn.discordapp.com/attachments/652921814321725454/652990603302404106/Ventorvar_SC_HOSASAT_37.xml">Ventorvar_SC_37_HOSASAT.xml</a></li>
+<li><strong>Diagram of the key layout:</strong> <a href="https://drive.google.com/file/d/1UM4qPccTYAkluSx1fLwBGfNH6mXuxYqS/view?usp=sharing">here</a></li>
+<li><strong>SC Control Mapping:</strong> <a href="https://cdn.discordapp.com/attachments/652921814321725454/999775811257258024/layout_Ventorvar_HOSAS_3_17_2_exported.xml">layout_Ventorvar_HOSAS_3_17_2_exported.xml</a></li>
+<li><strong>Dual Thrustmaster Joystick Gremlin Profile:</strong> <a href="https://cdn.discordapp.com/attachments/652921814321725454/999775811513102516/Ventorvar_SC_HOSAS_3.17.2.xml">Ventorvar_SC_HOSAS_3.17.2.xml</a></li>
+</ul>
+<h2 id="loading-the-sc-control-mapping">Loading the SC Control Mapping</h2>
+<ul>
+<li>Place the control mapping into the <code>RSI\StarCitizen\LIVE\USER\Client\0\Controls\Mappings</code> folder</li>
+<li>Launch Star Citizen</li>
+<li>In <strong>Options &gt; KEYBINDINGS &gt; ADVANCED CONTROLS CUSTOMIZATION</strong> menu, use the right arrow in the</li>
+<li>Click the button on the right that says <strong>&gt; CONTROL PROFILES</strong></li>
+<li>Scroll down and choose the new control mapping</li>
+<li>For each <strong>Joystick</strong> listed on the left side, choose the button next to it that says <strong>None</strong> and change it to <strong>JoyStick</strong></li>
 </ul>
 <h2 id="importing-joystick-gremlin-profile">Importing Joystick Gremlin Profile</h2>
-<p>Importing the Joystick Gremlin profile can be a bit tricky, until I write a plugin to handle the import, this is my recommended method.</p>
+<p>Importing the Joystick Gremlin profile can be a bit tricky, until someone writes a plugin to handle the import,
+this is my recommended method.</p>
 <ul>
 <li>Start <strong>Joystick Gremlin</strong></li>
 <li>Press buttons to determine which joystick is which, and give each device an appropriate <strong>Device Label</strong></li>
 <li>Use <strong>Save Profile As</strong> to save the empty profile, call it something like <code>GUIDs</code></li>
-<li>Go to your JG folder (<code>C:\Users\username\joystick gremlin</code>) and copy the downloaded profile from above into this
+<li>Go to your JG folder (<code>C:\Users\{username}\joystick gremlin</code>) and copy the downloaded profile from above into this
 folder next to the <code>GUIDs.xml</code></li>
 <li>Open <code>GUIDs.xml</code> and the new profile in a text editor (like notepad++)</li>
 <li>In the <code>GUIDs.xml</code> file you will find a <code>&lt;device</code> listing for each of your devices that also shows it&rsquo;s
@@ -203,12 +212,19 @@ up the correct device, and save the profile</li>
         <div class="pagination__buttons">
           
             <span class="button previous">
-              <a href="https://ventorvar.com/posts/gladiator-k/">
+              <a href="https://ventorvar.com/posts/joystick-config/">
                 <span class="button__icon">←</span>
-                <span class="button__text">The Gladiator K from VKB</span>
+                <span class="button__text">Intro to Advanced Joystick Configs - Part 2</span>
               </a>
             </span>
           
+          
+            <span class="button next">
+              <a href="https://ventorvar.com/posts/devreorder-tutorial/">
+                <span class="button__text">devreorder Setup Guide</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
           
         </div>
       </div>

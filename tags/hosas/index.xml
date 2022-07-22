@@ -20,6 +20,27 @@ The Problem We&amp;rsquo;re Trying to Solve Using multiple joysticks on Windows 
     </item>
     
     <item>
+      <title>Intro to Advanced Joystick Configs - Part 2</title>
+      <link>https://ventorvar.com/posts/joystick-config/</link>
+      <pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ventorvar.com/posts/joystick-config/</guid>
+      <description>Note: This is part 2 of a series. If you haven&amp;rsquo;t already installed all the required tools, go check out part 1 first.
+Just need the configs? go to the TL;DR
+Getting familiar with Joystick Gremlin The keystone to our entire setup is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard.</description>
+    </item>
+    
+    <item>
+      <title>TL;DR - Advanced Joystick Configs for Star Citizen </title>
+      <link>https://ventorvar.com/posts/joystick-sc-tldr/</link>
+      <pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ventorvar.com/posts/joystick-sc-tldr/</guid>
+      <description>Star Citizen Advanced Controls Configuration These configurations are based off my personal setup for Star Citizen and are outlined in a two part guide on this site. That being said there are a few requirements, and you can use my configurations as a starting point whether or not you have the same joystick setup.
+Note: This was last updated for Star Citizen 3.17.2-PTU.8143480 and may or may not work with the current build</description>
+    </item>
+    
+    <item>
       <title>devreorder Setup Guide</title>
       <link>https://ventorvar.com/posts/devreorder-tutorial/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
@@ -29,17 +50,6 @@ The Problem We&amp;rsquo;re Trying to Solve Using multiple joysticks on Windows 
 dinput8 DLL wrapper called devreorder
 Setting up devreorder Note: If devreorder doesn&amp;rsquo;t work with your game, HidGuardian is another option to hide inputs from your game
 Download the latest release here (the zip file) Unzip x64/dinput8.dll to your Star Citizen LIVE\Bin64 folder next to StarCitizen.</description>
-    </item>
-    
-    <item>
-      <title>Intro to Advanced Joystick Configs - Part 2</title>
-      <link>https://ventorvar.com/posts/joystick-config/</link>
-      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ventorvar.com/posts/joystick-config/</guid>
-      <description>Note: This is part 2 of a series. If you haven&amp;rsquo;t already installed all the required tools, go check out part 1 first.
-Just need the configs? go to the TL;DR
-Getting familiar with Joystick Gremlin The keystone to our entire setup is Joystick Gremlin (JG). JG allows you to remap inputs from your devices to other inputs on your system. For example, you can configure it so with you press the trigger button on your left joystick, it presses the Shift key on your keyboard.</description>
     </item>
     
     <item>
@@ -59,16 +69,6 @@ Setting up HidGuardian Note: If HidGuardian does not work well on your system, t
       
       <guid>https://ventorvar.com/posts/gladiator-k/</guid>
       <description>Star Citizen Advanced Controls Configuration </description>
-    </item>
-    
-    <item>
-      <title>TL;DR - Advanced Joystick Configs for Star Citizen </title>
-      <link>https://ventorvar.com/posts/joystick-sc-tldr/</link>
-      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ventorvar.com/posts/joystick-sc-tldr/</guid>
-      <description>Star Citizen Advanced Controls Configuration These configurations are based off my personal setup for Star Citizen and are outlined in a two part guide on this site. That being said there are a few requirements, and you can use my configurations as a starting point whether or not you have the same joystick setup.
-Note: This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may not work with the current build</description>
     </item>
     
   </channel>
